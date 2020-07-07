@@ -1,0 +1,50 @@
+import React from 'react';
+
+class ChevronRight extends React.Component {
+    constructor(props) {
+        super(props);
+
+    }
+
+    render() {
+        if (this.props.buttonHide === true) {
+        return (
+        <div className="Chevron">
+              <style jsx>{`
+              
+              .Chevron {
+                position: absolute;
+                display: block;
+                height: 50px;
+                width: 50px;
+                transform: rotate(-90deg);
+                right: 10%;
+                z-index: 10;
+                top: 48%;
+              }
+              .Chevron::before,
+              .Chevron::after {
+                position:absolute;
+                display:block;
+                content:"";
+                border:25px solid transparent; /*adjust size*/
+              }
+              /*Change the four instances of 'top' below to rotate (top/right/bottom/left)*/
+              .Chevron::before {
+                top:0;
+                border-top-color:#b00; /*Chevron Color*/
+              }
+              .Chevron::after {
+                top:-10px; /*adjust thickness*/
+                border-top-color:#fff; /*Match background colour*/
+              }
+
+              `}</style>
+        </div>
+        )} else {
+            return null
+        }
+    }
+}
+
+export default ChevronRight;
