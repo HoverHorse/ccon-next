@@ -100,14 +100,14 @@ class SmallButton extends React.Component {
                             align-content: center;
                           }
 
-                          @media (max-width: 608px) {
+                          @media (max-width: 720px) {
                             div #buttons {
                               height: 150px;
                               width: 150px;
                             }
                           }
 
-                          @media (max-width: 608px) {
+                          @media (max-width: 720px) {
                             #smallButtonTag {
                               position: absolute;
                               transform: translate(145%, -95%)

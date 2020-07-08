@@ -24,7 +24,7 @@ class CloseButton extends React.Component {
                     position: absolute;
                     z-index: 40;
                     right: 11%;
-                    transform: translate(0%, 8.5vh);
+                    transform: translate(0%, 180px);
                   }
                   
                   .mdiv {

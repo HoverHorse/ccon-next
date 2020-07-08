@@ -18,10 +18,17 @@ class ChevronRight extends React.Component {
                 height: 50px;
                 width: 50px;
                 transform: rotate(-90deg);
-                right: 10%;
+                right: -18px;
                 z-index: 10;
-                top: 48%;
               }
+
+              @media (max-width: 720px) {
+                .Chevron {
+                  
+                }
+
+            }
+
               .Chevron::before,
               .Chevron::after {
                 position:absolute;

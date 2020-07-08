@@ -19,10 +19,17 @@ class ChevronLeft extends React.Component {
                 height:50px; /*height should be double border*/
                 width: 50px;
                 transform: rotate(90deg);
-                top: 49%;
-                left: 10%;
                 z-index: 10;
+                margin-left: -18px;
             }
+
+            @media (max-width: 720px) {
+                .ChevronL {
+                    
+                }
+
+            }
+
             .ChevronL::before,
             .ChevronL::after {
                 position:absolute;
@@ -30,6 +37,7 @@ class ChevronLeft extends React.Component {
                 content:"";
                 border:25px solid transparent; /*adjust size*/
             }
+
             /*Change the four instances of 'top' below to rotate (top/right/bottom/left)*/
             .ChevronL::before {
                 top:0;

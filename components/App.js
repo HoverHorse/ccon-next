@@ -168,17 +168,17 @@ class App extends React.Component {
 
 
          <div id="buttonContainer" >
-            <a onClick={this.seeSolo}  id="soloButton" style={{cursor:'pointer'}}><SoloButton showComponent={this.seeSolo} visible={this.state.viewSolo} buttonHide={this.state.viewSmall || this.state.viewCorp} /></a>
-            <a onClick={this.seeSmall}  id="smallButton" style={{cursor:'pointer'}}><SmallButton visible={this.state.viewSmall} buttonHide={this.state.viewSolo || this.state.viewCorp} /></a>
-            <a onClick={this.seeCorp}  id="corpButton" style={{cursor:'pointer'}}><CorpButton visible={this.state.viewCorp} buttonHide={this.state.viewSmall || this.state.viewSolo} /></a>
+            <a onClick={this.seeSolo}  id="soloButton" style={{cursor:'pointer'}}><SoloButton showComponent={this.seeSolo} visible={this.state.viewSolo} buttonHide={this.state.viewSmall || this.state.viewCorp || this.state.viewRevolution || this.state.viewContact} /></a>
+            <a onClick={this.seeSmall}  id="smallButton" style={{cursor:'pointer'}}><SmallButton visible={this.state.viewSmall} buttonHide={this.state.viewSolo || this.state.viewCorp || this.state.viewRevolution || this.state.viewContact} /></a>
+            <a onClick={this.seeCorp}  id="corpButton" style={{cursor:'pointer'}}><CorpButton visible={this.state.viewCorp} buttonHide={this.state.viewSmall || this.state.viewSolo || this.state.viewRevolution || this.state.viewContact} /></a>
               <div id="footerContainer">
                 <a onClick={this.seeContact} id="contactButton" style={{cursor:'pointer'}} id="footerLink"><Contact buttonHide={this.state.viewSolo || this.state.viewSmall || this.state.viewCorp || this.state.viewContact || this.state.viewRevolution}></Contact></a>
               </div>
          </div>
 
          <div>
-            <a onClick={this.pageRight} style={{cursor:'pointer'}}><ChevronRight buttonHide={this.state.viewSolo || this.state.viewSmall || this.state.viewCorp}/></a>
-            <a onClick={this.pageLeft} style={{cursor:'pointer'}}><ChevronLeft buttonHide={this.state.viewSolo || this.state.viewSmall || this.state.viewCorp}/></a>
+            <a id="rightArrow" onClick={this.pageRight} style={{cursor:'pointer'}}><ChevronRight buttonHide={this.state.viewSolo || this.state.viewSmall || this.state.viewCorp}/></a>
+            <a id="leftArrow" onClick={this.pageLeft} style={{cursor:'pointer'}}><ChevronLeft buttonHide={this.state.viewSolo || this.state.viewSmall || this.state.viewCorp}/></a>
             <a onClick={this.closeAll} style={{cursor:'pointer'}}><CloseButton buttonHide={this.state.viewSolo || this.state.viewSmall || this.state.viewCorp || this.state.viewContact || this.state.viewRevolution}/></a>
             <SoloContent visible={this.state.viewSolo} pageNum={this.state.contentPage} id="soloContent" />
             <SmallContent visible={this.state.viewSmall} pageNum={this.state.contentPage} id="smallContent" />
@@ -205,6 +205,50 @@ class App extends React.Component {
             opacity: 1;
             pointer-events: none;
           }
+
+          #rightArrow {
+            height: 50px;
+            width: 80vw;
+            position: absolute;
+            left: 10%;
+            margin-top: 175px;
+            top: 34%;
+            min-width: 450px;
+          }
+
+          @media (max-width: 1401px) {
+            #rightArrow {
+              top: 40%;
+            }
+          }
+
+          @media (max-width: 720px) {
+            #rightArrow {
+              top: 33%;
+            }
+          }
+
+          #leftArrow {
+            height: 50px;
+            width: 80vw;
+            position: absolute;
+            left: 10%;
+            margin-top: 175px;
+            top: 34%;
+            min-width: 450px;
+          }
+
+          @media (max-width: 1401px) {
+            #leftArrow {
+              top: 40%;
+            }
+          }
+
+          @media (max-width: 720px) {
+            #leftArrow {
+              top: 33%;
+            }
+          }
           
           #logo {
             width: 250px;
@@ -212,7 +256,6 @@ class App extends React.Component {
             z-index: -1;
             pointer-events: none;
           }
-          
           
           .sigText {
             font-family: Syncopate;
@@ -251,7 +294,7 @@ class App extends React.Component {
             transform: translate(0%, 150px)
           }
 
-          @media (max-width: 608px){
+          @media (max-width: 720px){
 
             div #bannerDiv{
               display: none;
@@ -269,7 +312,7 @@ class App extends React.Component {
               justify-content: space-evenly;
           }
 
-          @media (max-width: 608px) {
+          @media (max-width: 720px) {
             div #buttonContainer{
               display: inline-flexbox;
               justify-content: space-evenly;
@@ -323,7 +366,7 @@ class App extends React.Component {
               margin-top: 20%;
           }
 
-          @media (max-width: 608px) {
+          @media (max-width: 720px) {
             #footerContainer {
               width: 100%;
               position: fixed;
