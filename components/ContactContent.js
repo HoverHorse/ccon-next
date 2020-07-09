@@ -8,7 +8,7 @@ class ContactContent extends React.Component {
     }
 
     render() {
-        if (this.props.visible === true) {
+      if (this.props.show) {
             return (
             <div id="contentContainer">
               <p id="contactText">Contact info goes here</p>
@@ -84,11 +84,11 @@ class ContactContent extends React.Component {
                 
                 `}
               </style>
-            </div>)
-            } else {
-                return (null)
-            };
-    }
+            </div>
+     )} else {
+       return null;
+     }
+   }
 }
 
 export default ContactContent;

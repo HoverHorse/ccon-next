@@ -2,21 +2,23 @@ import React from 'react';
 import SoloExplain from './SoloExplain';
 import SingleFigure from '../public/assets/single-figure.png';
 
+
 class SoloButton extends React.Component {
     constructor (props) {
         super(props);
-        
+
         };
 
+
         render() {
-            if (this.props.visible === false && this.props.buttonHide === false) {
+
             return (
                 <div id="buttons">
                     <div id="circle">
                         <img className="soloButtonImage" src={SingleFigure}/>
                     </div>
                     <div id="soloButtonTag">
-                      <SoloExplain visible={this.props.visible} buttonHide={this.props.buttonHide} />
+                      <SoloExplain />
                     </div>
 
                     <style jsx>
@@ -125,9 +127,7 @@ class SoloButton extends React.Component {
                     </style>
 
                 </div>
-            )} else {
-                return null
-            }
+            )
         }
     }
 

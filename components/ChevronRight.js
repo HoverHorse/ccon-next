@@ -7,7 +7,6 @@ class ChevronRight extends React.Component {
     }
 
     render() {
-        if (this.props.buttonHide === true) {
         return (
         <div className="Chevron">
               <style jsx>{`
@@ -48,9 +47,7 @@ class ChevronRight extends React.Component {
 
               `}</style>
         </div>
-        )} else {
-            return null
-        }
+        )
     }
 }
 

@@ -13,6 +13,8 @@ import SmallContent from './SmallContent';
 import CorpContent from './CorpContent';
 import ContactContent from './ContactContent';
 import Revolution from './Revolution';
+import {useSpring, animated} from 'react-spring';
+
 
 
 class App extends React.Component {
@@ -27,9 +29,9 @@ class App extends React.Component {
       contentPage: 3,
       viewContact: false,
       viewRevolution: false,
-      soloTransition: "",
-      smallTransition: "",
-      corpTransition: "",
+      buttonFade: "fadeIn",
+      contentFade: "fadeOut",
+      renderButtons: true,
     };
 
     this.seeSolo = this.seeSolo.bind(this);
@@ -40,85 +42,77 @@ class App extends React.Component {
     this.pageLeft = this.pageLeft.bind(this);
     this.seeContact = this.seeContact.bind(this);
     this.seeRevolution = this.seeRevolution.bind(this);
+    this.changeSolo = this.changeSolo.bind(this);
+    this.timerCloseContent = this.timerCloseContent.bind(this);
   }
 
   // Function objects
-  
+
   closeAll() {
     this.setState({
       viewSolo: false,
       viewSmall: false,
       viewCorp: false,
-      contentPage: 3,
+      contentPage: 1,
       viewContact: false,
       viewRevolution: false,
+      buttonFade: "fadeIn",
+      contentFade: "fadeOut",
     });
   }
 
+  timerCloseContent() {
+    this.setState({
+      buttonFade: "fadeIn",
+      contentFade: "fadeOut",
+    })
+    setTimeout(this.closeAll, 1000);
+  }
+
   seeSolo() {
-    this.setState(state => ({
+    this.setState({
       viewSolo: true,
-    }));
+      buttonFade: "fadeOut",
+      contentFade: "fadeIn"
+    });
+  }
+
+  changeSolo() {
+    this.setState({
+      viewSolo: true,
+    });
   }
 
   seeSmall() {
     this.setState({
       viewSmall: true,
+      buttonFade: "fadeOut",
+      contentFade: "fadeIn"
     });
   }
 
   seeCorp() {
     this.setState({
       viewCorp: true,
+      buttonFade: "fadeOut",
+      contentFade: "fadeIn"
     });
   }
 
   seeContact() {
     this.setState({
       viewContact: true,
+      buttonFade: "fadeOut",
+      contentFade: "fadeIn"
     });
   }
 
   seeRevolution() {
     this.setState({
       viewRevolution: true,
+      buttonFade: "fadeOut",
+      contentFade: "fadeIn"
     });
-  }
-
-  setSoloSlideIn() {
-    this.setState({
-      soloTransition: "slideIn"
-    })
-  }
-
-  setSoloSlideOut() {
-    this.setState({
-      soloTransition: "slideOut"
-    })
-  }
-
-  setSmallSlideIn() {
-    this.setState({
-      smallTransition: "slideIn"
-    })
-  }
-
-  setSmallSlideOut() {
-    this.setState({
-      smallTransition: "slideOut"
-    })
-  }
-
-  setCorpSlideIn() {
-    this.setState({
-      corpTransition: "slideIn"
-    })
-  }
-
-  setCorpSlideOut() {
-    this.setState({
-      corpTransition: "slideOut"
-    })
   }
 
   pageRight() {
@@ -143,8 +137,6 @@ class App extends React.Component {
     }
   }
 
-
-  // Rendered objects
   render() {
 
     return (
@@ -167,27 +159,62 @@ class App extends React.Component {
         </div>
 
 
-         <div id="buttonContainer" >
-            <a onClick={this.seeSolo}  id="soloButton" style={{cursor:'pointer'}}><SoloButton showComponent={this.seeSolo} visible={this.state.viewSolo} buttonHide={this.state.viewSmall || this.state.viewCorp || this.state.viewRevolution || this.state.viewContact} /></a>
-            <a onClick={this.seeSmall}  id="smallButton" style={{cursor:'pointer'}}><SmallButton visible={this.state.viewSmall} buttonHide={this.state.viewSolo || this.state.viewCorp || this.state.viewRevolution || this.state.viewContact} /></a>
-            <a onClick={this.seeCorp}  id="corpButton" style={{cursor:'pointer'}}><CorpButton visible={this.state.viewCorp} buttonHide={this.state.viewSmall || this.state.viewSolo || this.state.viewRevolution || this.state.viewContact} /></a>
+         <div id="buttonContainer" className={this.state.buttonFade}>
+          
+            <a onClick={this.seeSolo}  id="soloButton" style={{cursor:'pointer'}}>
+              <SoloButton />
+            </a>
+
+            <a onClick={this.seeSmall}  id="smallButton" style={{cursor:'pointer'}}>
+              <SmallButton />
+            </a>
+
+            <a onClick={this.seeCorp}  id="corpButton" style={{cursor:'pointer'}}>
+              <CorpButton />
+            </a>
+
               <div id="footerContainer">
-                <a onClick={this.seeContact} id="contactButton" style={{cursor:'pointer'}} id="footerLink"><Contact buttonHide={this.state.viewSolo || this.state.viewSmall || this.state.viewCorp || this.state.viewContact || this.state.viewRevolution}></Contact></a>
+
+                <a onClick={this.seeContact} id="contactButton" style={{cursor:'pointer'}} id="footerLink">
+                  <Contact />
+                </a>
+
               </div>
          </div>
 
-         <div>
-            <a id="rightArrow" onClick={this.pageRight} style={{cursor:'pointer'}}><ChevronRight buttonHide={this.state.viewSolo || this.state.viewSmall || this.state.viewCorp}/></a>
-            <a id="leftArrow" onClick={this.pageLeft} style={{cursor:'pointer'}}><ChevronLeft buttonHide={this.state.viewSolo || this.state.viewSmall || this.state.viewCorp}/></a>
-            <a onClick={this.closeAll} style={{cursor:'pointer'}}><CloseButton buttonHide={this.state.viewSolo || this.state.viewSmall || this.state.viewCorp || this.state.viewContact || this.state.viewRevolution}/></a>
-            <SoloContent visible={this.state.viewSolo} pageNum={this.state.contentPage} id="soloContent" />
-            <SmallContent visible={this.state.viewSmall} pageNum={this.state.contentPage} id="smallContent" />
-            <CorpContent visible={this.state.viewCorp} pageNum={this.state.contentPage} id="corpContent" />
-            <ContactContent visible={this.state.viewContact} id="contactContent" />
-            <Revolution visible={this.state.viewRevolution} id="revContent" />
+         <div id="contentContainer" className={this.state.contentFade}>
+            <a id="rightArrow" onClick={this.pageRight} style={{cursor:'pointer'}}>
+              <ChevronRight />
+            </a>
+
+            <a id="leftArrow" onClick={this.pageLeft} style={{cursor:'pointer'}}>
+              <ChevronLeft />
+            </a>
+
+            <a onClick={this.timerCloseContent} style={{cursor:'pointer'}}>
+              <CloseButton />
+            </a>
+
+            <SoloContent show={this.state.viewSolo} pageNum={this.state.contentPage} id="soloContent" />
+            <SmallContent show={this.state.viewSmall} pageNum={this.state.contentPage} id="smallContent" />
+            <CorpContent show={this.state.viewCorp} pageNum={this.state.contentPage} id="corpContent" />
+            <ContactContent show={this.state.viewContact} id="contactContent" />
+            <Revolution show={this.state.viewRevolution} id="revContent" />
          </div>
 
           <style jsx>{`
+
+          .fadeIn {
+            opacity: 1;
+            transition: opacity 0.5s linear;
+            z-Index: 5;
+          }
+
+          .fadeOut {
+            opacity: 0;
+            transition: opacity 0.5s linear;
+            pointer-events: none;
+          }
 
           .App {
             text-align: center;
@@ -301,12 +328,12 @@ class App extends React.Component {
             }
           }
 
-          div #buttonContainer {
+          #buttonContainer {
               position: absolute;
               width: 80%;
               left: 50%;
-              top: 50%;
-              transform: translate(-50%, -85%);
+              margin-top: 250px;
+              transform: translate(-50%, -0%);
               display: flex;
               height: 15vw;
               justify-content: space-evenly;
@@ -320,6 +347,7 @@ class App extends React.Component {
               height: 60%;
               top: 60%;
               transform: translate(-120%, -65%);
+              margin-top: 0;
             }
           }
           
@@ -327,43 +355,29 @@ class App extends React.Component {
             width: 15vw;
             min-width: 150px;
             min-height: 150px;
-            margin: 4vw;
+            margin-left: 4vw;
           }
 
           #smallButton{
             width: 15vw;
             min-width: 150px;
             min-height: 150px;
-            margin: 4vw;
+            margin-left: 4vw;
+            margin-right: 4vw;
           }
    
           #soloButton{
             width: 15vw;
             min-width: 150px;
             min-height: 150px;
-            margin: 4vw;
-          }
-          
-          div #contentContainer {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 60vh;
-            width: 80vw;
-            background-color: white;
-            border-radius: 8px;
-            
+            margin-right: 4vw;
           }
           
           #footerContainer {
               width: 33%;
               position: fixed;
-              transform: translate(0%, 500%);
-              margin-top: 20%;
+              transform: translate(0%, 600%);
+              margin-top: 12vw;
           }
 
           @media (max-width: 720px) {

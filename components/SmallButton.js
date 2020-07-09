@@ -9,7 +9,6 @@ class SmallButton extends React.Component {
         };
 
         render() {
-            if (this.props.visible === false && this.props.buttonHide === false) {
             return (
                 <div id="buttons">
                     <div id="circle">
@@ -18,7 +17,7 @@ class SmallButton extends React.Component {
                     </div>
 
                     <div id="smallButtonTag">
-                    <SmallExplain visible={this.props.visible} buttonHide={this.props.buttonHide} />
+                    <SmallExplain />
                     </div>
 
                     <style jsx>
@@ -125,9 +124,7 @@ class SmallButton extends React.Component {
                         `}
                     </style>
                 </div>
-            )} else {
-                return null
-            }
+            )
         }
     }
 

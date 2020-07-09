@@ -7,11 +7,9 @@ class Contact extends React.Component {
     }
 
     render() {
-        if (this.props.buttonHide === false) {
           return (
               <div className="contactButton">
                   Contact Us
-
                   <style jsx>
                       {`
                       
@@ -57,9 +55,6 @@ class Contact extends React.Component {
                   </style>
               </div>
           )
-          } else {
-          return null
-          }
       }
 }
 

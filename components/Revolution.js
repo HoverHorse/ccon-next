@@ -7,7 +7,7 @@ class Revolution extends React.Component {
         };
 
         render() {
-            if (this.props.visible === true) {
+            if (this.props.show) {
                 return (
                 <div id="contentContainer">
                     <div className="contentCanvas">

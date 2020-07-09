@@ -9,7 +9,6 @@ class CorpButton extends React.Component {
         };
 
         render() {
-            if (this.props.visible === false && this.props.buttonHide === false) {
             return (
                 <div id="buttons">
                     <div id="circle">
@@ -17,7 +16,7 @@ class CorpButton extends React.Component {
                     </div>
 
                     <div id="corpButtonTag">
-                      <CorpExplain visible={this.props.visible} buttonHide={this.props.buttonHide}/>
+                      <CorpExplain />
                     </div>
 
                   <style jsx>
@@ -124,9 +123,7 @@ class CorpButton extends React.Component {
                         `}
                     </style>
                 </div>
-            )} else {
-                return null
-            }
+            )
         }
     }
 

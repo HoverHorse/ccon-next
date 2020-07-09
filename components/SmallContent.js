@@ -6,7 +6,7 @@ class SmallContent extends React.Component {
     }
 
     render() {
-        if (this.props.visible === true && this.props.pageNum === 1) {
+        if (this.props.pageNum === 1 && this.props.show) {
             return (
             <div id="contentContainer">
                 <div className="contentCanvas">
@@ -77,7 +77,7 @@ class SmallContent extends React.Component {
                             }
                         `}</style>
             </div>)
-            } else if (this.props.visible === true && this.props.pageNum === 2) {
+            } else if (this.props.pageNum === 2 && this.props.show) {
                 return (
                     <div id="contentContainer">
                         <div className="contentCanvas">
@@ -149,7 +149,7 @@ class SmallContent extends React.Component {
                             }
                         `}</style>
                     </div>)
-            } else if (this.props.visible === true && this.props.pageNum === 3) {
+            } else if (this.props.pageNum === 3 && this.props.show) {
                 return (
                     <div id="contentContainer">
                         <div className="contentCanvas">
@@ -216,10 +216,10 @@ class SmallContent extends React.Component {
                               display: table-row;
                             }
                         `}</style>
-                    </div>)
-            } else {
-                return (null)
-            };
+                    </div>
+        )} else { 
+          return null;
+        }
     }
 }
 

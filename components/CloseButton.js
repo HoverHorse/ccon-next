@@ -7,7 +7,6 @@ class CloseButton extends React.Component {
     }
 
     render() {
-        if (this.props.buttonHide === true) {
         return (
         <div id="mdiv">
               <div className="mdiv">
@@ -47,9 +46,7 @@ class CloseButton extends React.Component {
                   `}
               </style>
         </div>
-        )} else {
-            return null
-        }
+        )
     }
 }
 

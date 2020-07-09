@@ -7,7 +7,6 @@ class SmallExplain extends React.Component {
         };
 
         render() {
-            if (this.props.visible === false && this.props.buttonHide === false) {
             return (
                 <div id="explainContainer">
                     <div>
@@ -41,9 +40,7 @@ class SmallExplain extends React.Component {
                         `}
                     </style>
                 </div>
-            )} else {
-                return null
-            }
+            )
         }
     }
 
