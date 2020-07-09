@@ -19,7 +19,7 @@ class CorpContent extends React.Component {
                 <style jsx>{`
                               #contentContainer {
                                 position: absolute;
-                                margin-top: 175px;
+                                margin-top: 100px;
                                 height: 60vh;
                                 margin-left: 10%;
                                 width: 80vw;

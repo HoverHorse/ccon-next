@@ -1,6 +1,5 @@
 import React from 'react';
 import App from '../components/App';
-import Head from 'next/head';
 
 class Index extends React.Component {
     render() {
@@ -18,6 +17,7 @@ class Index extends React.Component {
                           
                           html, body, #__next, #next-body {
                             margin: 0;
+                            margin-top: 0;
                             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
                               'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
                               sans-serif;
@@ -27,6 +27,7 @@ class Index extends React.Component {
                             background-color: #282c34;
                             width: 100%;
                             height: 100%;
+                            overflow: hidden;
 
                           }
                     `}

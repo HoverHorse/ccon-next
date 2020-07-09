@@ -13,6 +13,7 @@ import SmallContent from './SmallContent';
 import CorpContent from './CorpContent';
 import ContactContent from './ContactContent';
 import Revolution from './Revolution';
+import WordLoop from './TextLoop';
 import {useSpring, animated} from 'react-spring';
 
 
@@ -154,7 +155,7 @@ class App extends React.Component {
  
         <div id='bannerDiv'>
           <h2 id="banner">
-            <a id="revLink" onClick={this.seeRevolution} style={{cursor:'pointer'}}>Your _______ <i id="revTag">REVOLUTION</i> in the catalytic converter market</a>
+            <a id="revLink" onClick={this.seeRevolution} style={{cursor:'pointer'}}><WordLoop id="text-loop" /></a>
           </h2>
         </div>
 
@@ -204,6 +205,16 @@ class App extends React.Component {
 
           <style jsx>{`
 
+          @keyframes slideIn {
+            from { transform: translate(-1000px, 0); }
+            to   { transform: translate(0, 0); }
+          }
+
+          @keyframes slideOut {
+            from { transform: translate(0, 0); }
+            to   { transform: translate(1000px, 0); }
+          }
+
           .fadeIn {
             opacity: 1;
             transition: opacity 0.5s linear;
@@ -239,13 +250,13 @@ class App extends React.Component {
             position: absolute;
             left: 10%;
             margin-top: 175px;
-            top: 34%;
+            top: 37%;
             min-width: 450px;
           }
 
-          @media (max-width: 1401px) {
+          @media (max-width: 904px) {
             #rightArrow {
-              top: 40%;
+              top: 37%;
             }
           }
 
@@ -261,13 +272,13 @@ class App extends React.Component {
             position: absolute;
             left: 10%;
             margin-top: 175px;
-            top: 34%;
+            top: 37%;
             min-width: 450px;
           }
 
-          @media (max-width: 1401px) {
+          @media (max-width: 904px) {
             #leftArrow {
-              top: 40%;
+              top: 37%;
             }
           }
 
@@ -305,11 +316,11 @@ class App extends React.Component {
             font-size: 1.7em;
             height: 100%;
             text-shadow: 3px 3px black;
+            
           }
 
           #banner {
-            border-top: 1px solid red;
-            border-bottom: 1px solid red;
+            
             width: 80vw;
             margin: auto;
             color: white;
@@ -318,7 +329,7 @@ class App extends React.Component {
           }
           
           #bannerDiv {
-            transform: translate(0%, 150px)
+            transform: translate(0%, 120px)
           }
 
           @media (max-width: 720px){
@@ -332,7 +343,7 @@ class App extends React.Component {
               position: absolute;
               width: 80%;
               left: 50%;
-              margin-top: 250px;
+              margin-top: 150px;
               transform: translate(-50%, -0%);
               display: flex;
               height: 15vw;
@@ -377,7 +388,7 @@ class App extends React.Component {
               width: 33%;
               position: fixed;
               transform: translate(0%, 600%);
-              margin-top: 12vw;
+              margin-top: 11vw;
           }
 
           @media (max-width: 720px) {
