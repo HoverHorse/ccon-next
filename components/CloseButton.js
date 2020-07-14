@@ -19,11 +19,9 @@ class CloseButton extends React.Component {
                   #mdiv {
                     width: 25px;
                     height: 25px;
-                    opacity: 0.7;
+                    opacity: 0.8;
                     position: absolute;
                     z-index: 40;
-                    right: 11%;
-                    transform: translate(0%, 105px);
                   }
                   
                   .mdiv {
@@ -32,7 +30,7 @@ class CloseButton extends React.Component {
                     margin-left: 12px;
                     background-color: black;
                     transform: rotate(45deg);
-                    Z-index: 1;
+                    Z-index: 11;
                   }
                   
                   .md {
@@ -40,7 +38,7 @@ class CloseButton extends React.Component {
                     width: 4px;
                     background-color: black;
                     transform: rotate(90deg);
-                    Z-index: 2;
+                    Z-index: 22;
                   }
                   
                   `}

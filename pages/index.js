@@ -1,5 +1,9 @@
 import React from 'react';
 import App from '../components/App';
+import '@fortawesome/fontawesome-free/js/fontawesome'
+import '@fortawesome/fontawesome-free/js/solid'
+import '@fortawesome/fontawesome-free/js/regular'
+import '@fortawesome/fontawesome-free/js/brands'
 
 class Index extends React.Component {
     render() {

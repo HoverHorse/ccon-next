@@ -1,4 +1,5 @@
 import React from 'react';
+import CloseButton from './CloseButton';
 
 class Revolution extends React.Component {
     constructor (props) {
@@ -13,9 +14,19 @@ class Revolution extends React.Component {
                     <div className="contentCanvas">
                     REVOLUTION PLUGS GO HERE
                     </div>
+                    <a onClick={this.props.onClose} id="closeLink"><CloseButton id="close" /></a>
 
-                    <style jsx>
-                        {`
+                <style jsx>
+                    {`
+
+                        #closeLink {
+                            position: absolute;
+                            width: 25px;
+                            height: 25px;
+                            cursor: pointer;
+                            right: 2%;
+                            top: 2%;
+                        }
                         
                         #contentContainer {
                             position: absolute;

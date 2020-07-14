@@ -1,5 +1,6 @@
 import React from 'react';
 import MapImage from '../public/assets/map-image.png';
+import CloseButton from './CloseButton';
 
 class ContactContent extends React.Component {
     constructor(props) {
@@ -16,8 +17,19 @@ class ContactContent extends React.Component {
                 <img id="mapImg"  src={MapImage} />
               </div>
 
-              <style jsx>
-                {`
+              <a onClick={this.props.onClose} id="closeLink"><CloseButton id="close" /></a>
+
+                <style jsx>
+                    {`
+
+                #closeLink {
+                  position: absolute;
+                  width: 25px;
+                  height: 25px;
+                  cursor: pointer;
+                  right: 1%;
+                  top: 1%;
+                  }
 
                 #contentContainer {
                   position: absolute;
@@ -35,6 +47,7 @@ class ContactContent extends React.Component {
                   #contentContainer {
                     height: 73vh;
                     min-height: 575px;
+                    top: 9%;
                   }
                 }
                 

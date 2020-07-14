@@ -5,17 +5,12 @@ import SoloButton from './SoloButton';
 import SmallButton from './SmallButton';
 import CorpButton from './CorpButton';
 import Contact from './Contact';
-import ChevronRight from './ChevronRight';
-import ChevronLeft from './ChevronLeft';
-import CloseButton from './CloseButton';
-import SoloContent from './SoloContent';
-import SmallContent from './SmallContent';
-import CorpContent from './CorpContent';
+import SliderSolo from './SliderSolo';
+import SliderSmall from './SliderSmall';
+import SliderCorp from './SliderCorp';
 import ContactContent from './ContactContent';
 import Revolution from './Revolution';
 import WordLoop from './TextLoop';
-import {useSpring, animated} from 'react-spring';
-
 
 
 class App extends React.Component {
@@ -32,6 +27,7 @@ class App extends React.Component {
       viewRevolution: false,
       buttonFade: "fadeIn",
       contentFade: "fadeOut",
+      arrowFade: "fadeOut",
       renderButtons: true,
     };
 
@@ -39,11 +35,8 @@ class App extends React.Component {
     this.closeAll = this.closeAll.bind(this);
     this.seeSmall = this.seeSmall.bind(this);
     this.seeCorp = this.seeCorp.bind(this);
-    this.pageRight = this.pageRight.bind(this);
-    this.pageLeft = this.pageLeft.bind(this);
     this.seeContact = this.seeContact.bind(this);
     this.seeRevolution = this.seeRevolution.bind(this);
-    this.changeSolo = this.changeSolo.bind(this);
     this.timerCloseContent = this.timerCloseContent.bind(this);
   }
 
@@ -59,6 +52,7 @@ class App extends React.Component {
       viewRevolution: false,
       buttonFade: "fadeIn",
       contentFade: "fadeOut",
+      arrowFade: "fadeOut",
     });
   }
 
@@ -66,21 +60,17 @@ class App extends React.Component {
     this.setState({
       buttonFade: "fadeIn",
       contentFade: "fadeOut",
+      arrowFade: "fadeOut",
     })
-    setTimeout(this.closeAll, 1000);
+    setTimeout(this.closeAll, 500);
   }
 
   seeSolo() {
     this.setState({
       viewSolo: true,
       buttonFade: "fadeOut",
-      contentFade: "fadeIn"
-    });
-  }
-
-  changeSolo() {
-    this.setState({
-      viewSolo: true,
+      contentFade: "fadeIn",
+      arrowFade: "fadeIn",
     });
   }
 
@@ -88,7 +78,8 @@ class App extends React.Component {
     this.setState({
       viewSmall: true,
       buttonFade: "fadeOut",
-      contentFade: "fadeIn"
+      contentFade: "fadeIn",
+      arrowFade: "fadeIn",
     });
   }
 
@@ -96,7 +87,8 @@ class App extends React.Component {
     this.setState({
       viewCorp: true,
       buttonFade: "fadeOut",
-      contentFade: "fadeIn"
+      contentFade: "fadeIn",
+      arrowFade: "fadeIn",
     });
   }
 
@@ -104,7 +96,8 @@ class App extends React.Component {
     this.setState({
       viewContact: true,
       buttonFade: "fadeOut",
-      contentFade: "fadeIn"
+      contentFade: "fadeIn",
+      arrowFade: "fadeOut",
     });
   }
 
@@ -112,31 +105,11 @@ class App extends React.Component {
     this.setState({
       viewRevolution: true,
       buttonFade: "fadeOut",
-      contentFade: "fadeIn"
+      contentFade: "fadeIn",
+      arrowFade: "fadeOut",
     });
   }
-
-  pageRight() {
-    if (this.state.contentPage <= 2) {
-    this.setState({
-      contentPage: this.state.contentPage + 1
-    })} else if (this.state.contentPage = 3) {
-      this.setState({
-        contentPage: 1
-      })
-    }
-  }
-
-  pageLeft() {
-    if (this.state.contentPage >= 2) {
-    this.setState({
-      contentPage: this.state.contentPage - 1
-    })} else if (this.state.contentPage = 1) {
-    this.setState({
-        contentPage: 3
-      })
-    }
-  }
+  
 
   render() {
 
@@ -184,36 +157,14 @@ class App extends React.Component {
          </div>
 
          <div id="contentContainer" className={this.state.contentFade}>
-            <a id="rightArrow" onClick={this.pageRight} style={{cursor:'pointer'}}>
-              <ChevronRight />
-            </a>
-
-            <a id="leftArrow" onClick={this.pageLeft} style={{cursor:'pointer'}}>
-              <ChevronLeft />
-            </a>
-
-            <a onClick={this.timerCloseContent} style={{cursor:'pointer'}}>
-              <CloseButton />
-            </a>
-
-            <SoloContent show={this.state.viewSolo} pageNum={this.state.contentPage} id="soloContent" />
-            <SmallContent show={this.state.viewSmall} pageNum={this.state.contentPage} id="smallContent" />
-            <CorpContent show={this.state.viewCorp} pageNum={this.state.contentPage} id="corpContent" />
-            <ContactContent show={this.state.viewContact} id="contactContent" />
-            <Revolution show={this.state.viewRevolution} id="revContent" />
+            <SliderSolo show={this.state.viewSolo} onClose={this.timerCloseContent} id="soloContent" />
+            <SliderSmall show={this.state.viewSmall} onClose={this.timerCloseContent} id="smallContent" />
+            <SliderCorp show={this.state.viewCorp} onClose={this.timerCloseContent} id="corpContent" />
+            <ContactContent show={this.state.viewContact} onClose={this.timerCloseContent} id="contactContent" />
+            <Revolution show={this.state.viewRevolution} onClose={this.timerCloseContent} id="revContent" />
          </div>
 
           <style jsx>{`
-
-          @keyframes slideIn {
-            from { transform: translate(-1000px, 0); }
-            to   { transform: translate(0, 0); }
-          }
-
-          @keyframes slideOut {
-            from { transform: translate(0, 0); }
-            to   { transform: translate(1000px, 0); }
-          }
 
           .fadeIn {
             opacity: 1;
@@ -226,6 +177,7 @@ class App extends React.Component {
             transition: opacity 0.5s linear;
             pointer-events: none;
           }
+
 
           .App {
             text-align: center;
@@ -242,50 +194,6 @@ class App extends React.Component {
             z-index: 5;
             opacity: 1;
             pointer-events: none;
-          }
-
-          #rightArrow {
-            height: 50px;
-            width: 80vw;
-            position: absolute;
-            left: 10%;
-            margin-top: 175px;
-            top: 37%;
-            min-width: 450px;
-          }
-
-          @media (max-width: 904px) {
-            #rightArrow {
-              top: 37%;
-            }
-          }
-
-          @media (max-width: 720px) {
-            #rightArrow {
-              top: 33%;
-            }
-          }
-
-          #leftArrow {
-            height: 50px;
-            width: 80vw;
-            position: absolute;
-            left: 10%;
-            margin-top: 175px;
-            top: 37%;
-            min-width: 450px;
-          }
-
-          @media (max-width: 904px) {
-            #leftArrow {
-              top: 37%;
-            }
-          }
-
-          @media (max-width: 720px) {
-            #leftArrow {
-              top: 33%;
-            }
           }
           
           #logo {
@@ -320,7 +228,7 @@ class App extends React.Component {
           }
 
           #banner {
-            
+            min-width: 800px;
             width: 80vw;
             margin: auto;
             color: white;
