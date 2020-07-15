@@ -22,7 +22,7 @@ class App extends React.Component {
       viewSolo: false,
       viewSmall: false,
       viewCorp: false,
-      contentPage: 3,
+      contentPage: 1,
       viewContact: false,
       viewRevolution: false,
       buttonFade: "fadeIn",
@@ -116,7 +116,7 @@ class App extends React.Component {
     return (
       <div className="App">
 
-        <BackgroundVideo type='video/mp4' autoplay />
+        <BackgroundVideo type='video/mp4' autoplay mute />
 
 
         <div className="Signature">
