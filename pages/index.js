@@ -1,17 +1,21 @@
 import React from 'react';
 import App from '../components/App';
-import '@fortawesome/fontawesome-free/js/fontawesome'
-import '@fortawesome/fontawesome-free/js/solid'
-import '@fortawesome/fontawesome-free/js/regular'
-import '@fortawesome/fontawesome-free/js/brands'
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
+import Head from 'next/head';
 
 class Index extends React.Component {
     render() {
         return (
-            <div id="next-body">
+            <div>
+                <Head>
+                    <title>My page title</title>
+                    <link rel="icon" type="image/ico" href="/favicon.ico?=v1"/>
+                </Head>
 
                 <App></App>
-
                 <style>
                     {`
                         @font-face {
@@ -20,7 +24,7 @@ class Index extends React.Component {
                           }
                           
                           html, body, #__next, #next-body {
-                            margin: 0;
+                            margin: auto;
                             margin-top: 0;
                             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
                               'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -30,9 +34,8 @@ class Index extends React.Component {
                             
                             background-color: #282c34;
                             width: 100%;
-                            height: 100%;
-                            overflow: hidden;
-
+                            max-height: 800px;
+                            
                           }
                     `}
                 </style>

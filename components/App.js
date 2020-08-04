@@ -11,6 +11,10 @@ import SliderCorp from './SliderCorp';
 import ContactContent from './ContactContent';
 import Revolution from './Revolution';
 import WordLoop from './TextLoop';
+import Who from './Who';
+import What from './What';
+import Why from './Why';
+import ClickMe from './ClickMe';
 
 
 class App extends React.Component {
@@ -29,6 +33,7 @@ class App extends React.Component {
       contentFade: "fadeOut",
       arrowFade: "fadeOut",
       renderButtons: true,
+      bannerState: "",
     };
 
     this.seeSolo = this.seeSolo.bind(this);
@@ -53,6 +58,7 @@ class App extends React.Component {
       buttonFade: "fadeIn",
       contentFade: "fadeOut",
       arrowFade: "fadeOut",
+      bannerState: "",
     });
   }
 
@@ -71,6 +77,7 @@ class App extends React.Component {
       buttonFade: "fadeOut",
       contentFade: "fadeIn",
       arrowFade: "fadeIn",
+      bannerState: "Single-User",
     });
   }
 
@@ -80,6 +87,7 @@ class App extends React.Component {
       buttonFade: "fadeOut",
       contentFade: "fadeIn",
       arrowFade: "fadeIn",
+      bannerState: "Multi-User",
     });
   }
 
@@ -89,6 +97,7 @@ class App extends React.Component {
       buttonFade: "fadeOut",
       contentFade: "fadeIn",
       arrowFade: "fadeIn",
+      bannerState: "Multi-Location",
     });
   }
 
@@ -98,6 +107,11 @@ class App extends React.Component {
       buttonFade: "fadeOut",
       contentFade: "fadeIn",
       arrowFade: "fadeOut",
+      viewSolo: false,
+      viewSmall: false,
+      viewCorp: false,
+      viewRevolution: false,
+      bannerState: "Contact Us",
     });
   }
 
@@ -107,35 +121,75 @@ class App extends React.Component {
       buttonFade: "fadeOut",
       contentFade: "fadeIn",
       arrowFade: "fadeOut",
+      viewSolo: false,
+      viewSmall: false,
+      viewCorp: false,
+      viewContact: false,
+      bannerState: "Join the Ccon Revolution!",
     });
+  }
+
+  handleBannerChange() {
+
   }
   
 
   render() {
-
     return (
       <div className="App">
 
+        <head>
+          <title>Ccon Metals Inc. - The best catalytic converter scrap price</title>
+          <meta desc="Sell catalytic converters with transparency, security, and integrity."/>
+        </head>
+        
+
+        
         <BackgroundVideo type='video/mp4' autoplay mute />
+        <a onClick={this.closeAll}><div id="clickAway" >
+
+        </div></a>
 
 
         <div className="Signature">
-        <img id="logo" src={cconTriangle} />
+          <img id="logo" src={cconTriangle} alt="catalytic converter scrap price" />
             <h1 className="sigText">
                 METALS
             </h1>
+
+            <a onClick={this.seeContact} style={{cursor:'pointer'}} id="footerLink">
+              <div id="footerContainer">
+                <Contact />
+            </div>
+            </a>
         </div>
- 
-        <div id='bannerDiv'>
-          <h2 id="banner">
+
+        <div id='bannerDiv' >
+          <h2 id="banner" className={this.state.buttonFade} >
             <a id="revLink" onClick={this.seeRevolution} style={{cursor:'pointer'}}><WordLoop id="text-loop" /></a>
+          </h2>
+          <h2 id="banner2" className={this.state.contentFade}>
+            <span id="spanLink">{this.state.bannerState}</span>
           </h2>
         </div>
 
 
+        <div id="bioContainer" className={this.state.buttonFade}>
+            <div id="who"><Who /></div>
+            <div id="what"><What /></div>
+            <div id="why"><Why /></div>
+        </div>
+
+
+        <div id="clickMe" className={this.state.buttonFade}>
+          <ClickMe />
+        </div>
+
+        
+
          <div id="buttonContainer" className={this.state.buttonFade}>
-          
-            <a onClick={this.seeSolo}  id="soloButton" style={{cursor:'pointer'}}>
+            <a onClick={this.seeSolo}  id="soloButton" 
+            style={{cursor:'pointer'}}>
               <SoloButton />
             </a>
 
@@ -146,15 +200,9 @@ class App extends React.Component {
             <a onClick={this.seeCorp}  id="corpButton" style={{cursor:'pointer'}}>
               <CorpButton />
             </a>
+          </div>
 
-              <div id="footerContainer">
-
-                <a onClick={this.seeContact} id="contactButton" style={{cursor:'pointer'}} id="footerLink">
-                  <Contact />
-                </a>
-
-              </div>
-         </div>
+          
 
          <div id="contentContainer" className={this.state.contentFade}>
             <SliderSolo show={this.state.viewSolo} onClose={this.timerCloseContent} id="soloContent" />
@@ -164,12 +212,23 @@ class App extends React.Component {
             <Revolution show={this.state.viewRevolution} onClose={this.timerCloseContent} id="revContent" />
          </div>
 
+        
+
           <style jsx>{`
+
+          #contentContainer {
+            position: absolute;
+            height: 60%;
+            width: 90%;
+            top: 220px;
+            margin-left: 5%;
+            overflow: hidden;
+          }
 
           .fadeIn {
             opacity: 1;
             transition: opacity 0.5s linear;
-            z-Index: 5;
+            
           }
 
           .fadeOut {
@@ -183,40 +242,45 @@ class App extends React.Component {
             text-align: center;
             height: 100%;
             width: 100%;
+            box-sizing: border-box;
           }
           
           .Signature {
             font-family: Syncopate;
             color: rgb(192, 192, 192);
             position: fixed;
-            left: -30px;
-            top: -30px;
-            z-index: 5;
+            z-Index: 5;
             opacity: 1;
-            pointer-events: none;
+            width: 100%;
+            height: 100px;
+            margin-top: 0px;
           }
           
           #logo {
-            width: 250px;
-            max-width: 250px;
-            z-index: -1;
+            width: 200px;
+            max-width: 200px;
+            margin-top: -30px;
+            margin-left: -30px;
+            float: left;
             pointer-events: none;
           }
           
           .sigText {
             font-family: Syncopate;
-            font-size: 2em;
-            margin-top: -58%;
-            margin-left: 61%;
-            border-top: 1px solid red;
-            border-bottom: 1px solid red;
+            font-size: 1.8em;
+            margin-top: 52px;
+            margin-left: 90px;
             width: 7.5em;
             height: 0.95em;
+            position: fixed;
+            z-Index: -1;
+            pointer-events: none;
+            border-top: 1px solid red;
+            border-bottom: 1px solid red;
           }
 
           #revTag {
             color: red;
-            z-index: 2;
             height: 100%;
           }
           
@@ -224,94 +288,227 @@ class App extends React.Component {
             font-size: 1.7em;
             height: 100%;
             text-shadow: 3px 3px black;
-            
+          }
+
+          #spanLink {
+            font-size: 1.7em;
+            height: 100%;
+            text-shadow: 3px 3px black;
           }
 
           #banner {
-            min-width: 800px;
-            width: 80vw;
+            min-width: 716px;
+            width: 80%;
+            height: 100%;
             margin: auto;
             color: white;
-            z-index: 1;
-            opacity: 0.8;
+            border-top: 1px solid red;
+            border-bottom: 1px solid red;
+          }
+
+          #banner2 {
+            min-width: 716px;
+            width: 80%;
+            font-size: 1.7em;
+            height: 100%;
+            text-shadow: 3px 3px black;
+            margin: auto;
+            color: white;
+            border-top: 1px solid red;
+            border-bottom: 1px solid red;
+            transform: translateY(-100%);
           }
           
           #bannerDiv {
-            transform: translate(0%, 120px)
-          }
-
-          @media (max-width: 720px){
-
-            div #bannerDiv{
-              display: none;
-            }
+            position: absolute;
+            height: 66px;
+            width: 100%;
+            top: 130px;
+            min-width: 716px;
+            margin: auto;
+            z-Index: 4;
           }
 
           #buttonContainer {
-              position: absolute;
               width: 80%;
-              left: 50%;
-              margin-top: 150px;
-              transform: translate(-50%, -0%);
+              margin: auto;
+              
+              transform: translate(0%, 0);
               display: flex;
-              height: 15vw;
+              height: 60px;
               justify-content: space-evenly;
           }
 
-          @media (max-width: 720px) {
-            div #buttonContainer{
-              display: inline-flexbox;
-              justify-content: space-evenly;
-              width: 150px;
-              height: 60%;
-              top: 60%;
-              transform: translate(-120%, -65%);
-              margin-top: 0;
-            }
-          }
-          
-          #corpButton{
-            width: 15vw;
-            min-width: 150px;
-            min-height: 150px;
+          #corpButton {
+            width: 200px;
+            height: 60px;
             margin-left: 4vw;
+            
           }
 
-          #smallButton{
-            width: 15vw;
-            min-width: 150px;
-            min-height: 150px;
+          #smallButton {
+            width: 200px;
+            height: 60px;
             margin-left: 4vw;
             margin-right: 4vw;
+            
           }
    
-          #soloButton{
-            width: 15vw;
-            min-width: 150px;
-            min-height: 150px;
+          #soloButton {
             margin-right: 4vw;
+            width: 200px;
+            height: 60px;
+            
+          }
+
+          #clickMe {
+            height: 50px;
+            width: 100%;
+            font-size: 1.5em
+            
+          }
+
+          #clickAway {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: transparent;
+            top: 0;
+            z-Index; 10;
+            opacity: 0.99
+            overflow: hidden;
+          }
+
+          #bioContainer {
+            width: 80%;
+            margin: auto;
+            opacity: 0.99;
+            margin-bottom: 300px;
+            display: flex;
+            height: 300px;
+            justify-content: space-evenly;
+            }
+          
+          #who {
+            width: 200px;
+            height: 60px;
+            margin-right: 4vw;
+            margin-top: 250px;
+          }
+
+          #what {
+            width: 200px;
+            height: 60px;
+            margin-left: 4vw;
+            margin-right: 4vw;
+            margin-top: 250px;
+          }
+   
+          #why {
+            margin-left: 4vw;
+            width: 200px;
+            height: 60px;
+            margin-top: 250px;
           }
           
           #footerContainer {
-              width: 33%;
-              position: fixed;
-              transform: translate(0%, 600%);
-              margin-top: 11vw;
+              width: 216px;
+              height: 27px;
+              float: right;
+              margin-top: 52px;
+              text-align: center;
+              display: inline-block;
           }
 
           @media (max-width: 720px) {
             #footerContainer {
+              
+            }
+
+            #bannerDiv{
+              display: none;
+            }
+
+            
+
+            #bioContainer {
               width: 100%;
-              position: fixed;
-              transform: translate(70%, 50%);
-              margin-top: 0%;
-          }
-          }
-          
-          #soloButton{
-            z-index: 20;
-          }
+              height: 50vh;
+              display: inline-block;
+              margin-top: 110px;
+              margin-bottom: 0px;
+              position: relative;
+              min-width: 650px;
+              min-height: 300px;
+              }
+
+            #who {
+                width: 100%;
+                height: 33%;
+                margin-right: 0vw;
+                margin-top: 0px;
+              }
+    
+            #what {
+                width: 100%;
+                height: 33%;
+                margin-right: 0vw;
+                margin-left: 0vw;
+                margin-top: 0px;
+              }
+       
+            #why {
+                width: 100%;
+                height: 33%;
+                margin-left: 0vw;
+                margin-top: 0px;
+              }
+
+            #buttonContainer{
+              position: absolute;
+              display: inline-flexbox;
+              width: 100vw;
+              height: 25vh;
+              margin: auto;
+              left: 0;
+              min-width: 635px;
+              margin-top: 10px;
+            }
+
+            #corpButton {
+              position: absolute;
+              width: 90%;
+              height: 50px;
+              left: 0%;
+              margin-top: 120px;
+              margin-left: 5vw;
+            }
+  
+            #smallButton {
+              position: absolute;
+              width: 90%;
+              height: 50px;
+              left: 0%;
+              margin-top: 60px;
+              margin-left: 5vw;
+              margin-right: 0;
+            }
      
+            #soloButton {
+              position: absolute;
+              width: 90%;
+              height: 50px;
+              left: 0%;
+              margin-right: 0;
+              margin-left: 5vw;
+            }
+
+            #clickMe {
+              transform: translate(0, 15%)
+              
+            }
+        
+          }
           `}</style>
       </div>
     );

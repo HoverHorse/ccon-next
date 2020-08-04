@@ -12,13 +12,10 @@ class SmallButton extends React.Component {
             return (
                 <div id="buttons">
                     <div id="circle">
-                        <img className="smallButtonImage" src={SmallImage}/>
                         
                     </div>
 
-                    <div id="smallButtonTag">
                     <SmallExplain />
-                    </div>
 
                     <style jsx>
                         {`
@@ -38,11 +35,10 @@ class SmallButton extends React.Component {
                       
                           /* Brushed Metal */
                           min-width: 150px;
-                          min-height: 150px;
-                          width: 15vw;
-                          height: 15vw;
+                          width: 200px;
+                          height: 50px;
                           line-height: 1px;
-                          border-radius: 50%;
+                          border-radius: 8px;
                           background-image: 
                           -webkit-radial-gradient(  50%   0%,  8% 50%, hsla(0,0%,100%,.5) 0%, hsla(0,0%,100%,0) 100%),
                           -webkit-radial-gradient(  50% 100%, 12% 50%, hsla(0,0%,100%,.6) 0%, hsla(0,0%,100%,0) 100%),
@@ -92,35 +88,23 @@ class SmallButton extends React.Component {
 
                       
                         /* End Brushed Metal */
-                        
-                        
-                          div #buttons {
-                            justify-content: center;
-                            align-content: center;
-                          }
+                      
+                      
+                        #buttons {
+                          justify-content: center;
+                          align-content: center;
+                          max-height: 75px;
+                        }
 
-                          @media (max-width: 720px) {
-                            div #buttons {
-                              height: 150px;
-                              width: 150px;
-                            }
+                        @media (max-width: 720px) {
+                          #buttons {
+                            display: inline-block;
+                                  height: 50px;
+                                  width: 100%;
+                                  margin: auto;
                           }
+                        }
 
-                          @media (max-width: 720px) {
-                            #smallButtonTag {
-                              position: absolute;
-                              transform: translate(145%, -95%)
-                            }
-                          }
-                        
-                          .smallButtonImage {
-                            position: relative;
-                            height: 60%;
-                            width: 80%;
-                            min-width: 100px;
-                            min-height: 90px;
-                            transform: translate(0%, 30%);
-                        }  
                         `}
                     </style>
                 </div>
