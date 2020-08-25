@@ -9,21 +9,42 @@ class Contact extends React.Component {
     render() {
           return (
               <div className="contactButton">
-                  CONTACT
+                  <ul>
+                    <li>1-604-859-2855</li>
+                    <li>REVOLUTION@CCON.CA</li>
+                    <li id="address">107-2707 PROGRESSIVE WAY<br />
+                        ABBOTSFORD, BC V2T 0A7</li>
+                  </ul>
                   <style jsx>
                       {`
                      
                       .contactButton {
                         font-family: Syncopate;
-                        font-size: 1.8em;
-                        margin-top: 0px;
-                        margin-left: 0px;
-                        border-top: 1px solid red;
-                        border-bottom: 1px solid red;
-                        width: 7.5em;
-                        height: 0.95em;
+                        font-size: 1em;
+                        width: 360px;
+                        height: 1em;
                         position: fixed;
                         z-Index: -1;
+                        transform: translate(-160px, -40px);
+                        
+                      }
+
+                      ul {
+                        list-style: none;
+                        padding: 0;
+                        text-align: right;
+                      }
+
+                      @media (max-width: 720px) {
+
+                        #address {
+                          opacity: 1;
+                        }
+
+                        .contactButton {
+                          transform: translate(-160px, -40px);
+                        }
+
                       }
                       
                       `}

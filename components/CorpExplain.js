@@ -36,7 +36,8 @@ class CorpExplain extends React.Component {
                         #corpExplain {
                             color: white;
                             pointer-events: none;
-                            transform: translate(0%, 5px)
+                            transform: translate(0%, 5px);
+                            font-size: calc(14px + 0.4vw);
                         }
                         
                         @media (max-width: 720px) {
@@ -69,7 +70,7 @@ class CorpExplain extends React.Component {
                                 width: 400px;
                                 height: 50px;
                                 margin-left: 220px;
-                                transform: translate(0%, -12px)
+                                transform: translate(0%, -15px)
                             }
 
                     }

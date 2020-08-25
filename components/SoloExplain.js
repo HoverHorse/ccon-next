@@ -19,16 +19,19 @@ class SoloExplain extends React.Component {
 
                         #explainContainer {
                             transform: translate(0%, -75px)
+                            
                         }
 
                         .allText {
                             transform: translate(0%, 0%)
+                            
                         }
                         
                         #soloExplain {
                             color: white;
                             pointer-events: none;
-                            transform: translate(0%, 5px)
+                            transform: translate(0%, 5px);
+                            font-size: calc(14px + 0.4vw);
                         }
 
                         #soloButtonTag {
@@ -70,7 +73,7 @@ class SoloExplain extends React.Component {
                                 width: 400px;
                                 height: 50px;
                                 margin-left: 220px;
-                                transform: translate(0%, -5px)
+                                transform: translate(0px, -2px)
                             }
 
                             

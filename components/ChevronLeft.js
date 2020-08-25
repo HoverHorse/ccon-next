@@ -20,6 +20,7 @@ class ChevronLeft extends React.Component {
                 transform: rotate(90deg);
                 z-index: 10;
                 margin-left: -18px;
+                
             }
 
             @media (max-width: 720px) {
@@ -35,6 +36,7 @@ class ChevronLeft extends React.Component {
                 display:block;
                 content:"";
                 border:25px solid transparent; /*adjust size*/
+                
             }
 
             /*Change the four instances of 'top' below to rotate (top/right/bottom/left)*/
@@ -46,6 +48,7 @@ class ChevronLeft extends React.Component {
             .ChevronL::after {
                 top:-10px; /*adjust thickness*/
                 border-top-color:#fff; /*Match background colour*/
+                
             }
 
             `}

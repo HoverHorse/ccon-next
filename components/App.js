@@ -52,7 +52,7 @@ class App extends React.Component {
       viewSolo: false,
       viewSmall: false,
       viewCorp: false,
-      contentPage: 1,
+      contentPage: 2,
       viewContact: false,
       viewRevolution: false,
       buttonFade: "fadeIn",
@@ -157,7 +157,7 @@ class App extends React.Component {
                 METALS
             </h1>
 
-            <a onClick={this.seeContact} style={{cursor:'pointer'}} id="footerLink">
+            <a id="footerLink">
               <div id="footerContainer">
                 <Contact />
             </div>
@@ -173,11 +173,11 @@ class App extends React.Component {
           </h2>
         </div>
 
-
+        <div id="showcase">
         <div id="bioContainer" className={this.state.buttonFade}>
-            <div id="who"><Who /></div>
-            <div id="what"><What /></div>
-            <div id="why"><Why /></div>
+            <div id="who" className={this.state.buttonFade}><Who /></div>
+            <div id="what" className={this.state.buttonFade}><What /></div>
+            <div id="why" className={this.state.buttonFade}><Why /></div>
         </div>
 
 
@@ -201,7 +201,7 @@ class App extends React.Component {
               <CorpButton />
             </a>
           </div>
-
+          </div>
           
 
          <div id="contentContainer" className={this.state.contentFade}>
@@ -216,13 +216,20 @@ class App extends React.Component {
 
           <style jsx>{`
 
+          #showcase {
+            
+            height: 100vh;
+            width: 100%;
+          }
+
           #contentContainer {
             position: absolute;
-            height: 60%;
+            height: 65vh;
             width: 90%;
             top: 220px;
             margin-left: 5%;
-            overflow: hidden;
+            overflow-y: auto;
+            overflow-x: hidden;
           }
 
           .fadeIn {
@@ -240,9 +247,11 @@ class App extends React.Component {
 
           .App {
             text-align: center;
-            height: 100%;
+            height: 100vh;
             width: 100%;
             box-sizing: border-box;
+            
+            
           }
           
           .Signature {
@@ -254,6 +263,7 @@ class App extends React.Component {
             width: 100%;
             height: 100px;
             margin-top: 0px;
+            min-width: 630px;
           }
           
           #logo {
@@ -288,12 +298,14 @@ class App extends React.Component {
             font-size: 1.7em;
             height: 100%;
             text-shadow: 3px 3px black;
+            
           }
 
           #spanLink {
             font-size: 1.7em;
             height: 100%;
             text-shadow: 3px 3px black;
+            
           }
 
           #banner {
@@ -304,6 +316,7 @@ class App extends React.Component {
             color: white;
             border-top: 1px solid red;
             border-bottom: 1px solid red;
+            
           }
 
           #banner2 {
@@ -327,12 +340,12 @@ class App extends React.Component {
             min-width: 716px;
             margin: auto;
             z-Index: 4;
+            
           }
 
           #buttonContainer {
               width: 80%;
               margin: auto;
-              
               transform: translate(0%, 0);
               display: flex;
               height: 60px;
@@ -364,8 +377,9 @@ class App extends React.Component {
           #clickMe {
             height: 50px;
             width: 100%;
-            font-size: 1.5em
-            
+            font-size: 1.5em;
+            position: relative;
+            margin-top: 70px;
           }
 
           #clickAway {
@@ -376,24 +390,25 @@ class App extends React.Component {
             top: 0;
             z-Index; 10;
             opacity: 0.99
-            overflow: hidden;
+            
           }
 
           #bioContainer {
             width: 80%;
             margin: auto;
             opacity: 0.99;
-            margin-bottom: 300px;
-            display: flex;
+            display: inline-flex;
+            margin-top: 225px;
             height: 300px;
             justify-content: space-evenly;
+            
             }
           
           #who {
             width: 200px;
             height: 60px;
             margin-right: 4vw;
-            margin-top: 250px;
+            
           }
 
           #what {
@@ -401,14 +416,14 @@ class App extends React.Component {
             height: 60px;
             margin-left: 4vw;
             margin-right: 4vw;
-            margin-top: 250px;
+            
           }
    
           #why {
             margin-left: 4vw;
             width: 200px;
             height: 60px;
-            margin-top: 250px;
+            
           }
           
           #footerContainer {
@@ -427,19 +442,24 @@ class App extends React.Component {
 
             #bannerDiv{
               display: none;
+              
             }
 
-            
+            #contentContainer {
+              height: 80vh;
+              transform: translate(0, -90px);
+              min-height: 600px;
+            }
 
             #bioContainer {
               width: 100%;
-              height: 50vh;
+              height: 50%;
               display: inline-block;
               margin-top: 110px;
               margin-bottom: 0px;
               position: relative;
               min-width: 650px;
-              min-height: 300px;
+              
               }
 
             #who {
@@ -447,6 +467,7 @@ class App extends React.Component {
                 height: 33%;
                 margin-right: 0vw;
                 margin-top: 0px;
+                
               }
     
             #what {
@@ -455,6 +476,7 @@ class App extends React.Component {
                 margin-right: 0vw;
                 margin-left: 0vw;
                 margin-top: 0px;
+                
               }
        
             #why {
@@ -462,6 +484,7 @@ class App extends React.Component {
                 height: 33%;
                 margin-left: 0vw;
                 margin-top: 0px;
+                
               }
 
             #buttonContainer{
@@ -472,7 +495,7 @@ class App extends React.Component {
               margin: auto;
               left: 0;
               min-width: 635px;
-              margin-top: 10px;
+              margin-top: -35px;
             }
 
             #corpButton {
@@ -504,7 +527,7 @@ class App extends React.Component {
             }
 
             #clickMe {
-              transform: translate(0, 15%)
+              transform: translate(0, -60px)
               
             }
         

@@ -36,7 +36,16 @@ class Index extends React.Component {
                             width: 100%;
                             max-height: 800px;
                             
+                            min-width: 630px;
                           }
+
+                        @media (max-width: 720px) {
+
+                            body {
+                                overflow: hidden;
+                            }
+
+                        }
                     `}
                 </style>
             </div>
