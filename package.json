@@ -13,15 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
-    "google-maps-react": "^2.0.6",
     "next": "^9.4.4",
     "next-images": "^1.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-motion": "^0.5.2",
-    "react-slick": "^0.26.1",
     "react-text-loop": "^2.3.0",
-    "slick-carousel": "^1.8.1",
     "styled-jsx": "^3.3.0"
   }
 }
