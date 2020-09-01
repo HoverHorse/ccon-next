@@ -1,1 +1,0 @@
-{"ast":null,"code":"class Index extends React.Component {}","map":{"version":3,"sources":["C:/Users/shane/documents/GitHub Repository/ccon-next/pages/index.js"],"names":["Index","React","Component"],"mappings":"AAEA,MAAMA,KAAN,SAAoBC,KAAK,CAACC,SAA1B,CAAoC","sourcesContent":["\r\n\r\nclass Index extends React.Component {\r\n\r\n}"]},"metadata":{},"sourceType":"script"}
