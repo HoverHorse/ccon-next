@@ -11,7 +11,7 @@ class BackgroundVideo extends Component {
 
     render () {
         return (
-            <video alt="Sell catalytic converters" id="background-video" type="video/mp4" autoplay="" loop="" style={{
+            <video alt="Sell catalytic converters" id="background-video" type="video/mp4" muted autoplay="" loop="" style={{
 
                 height: '100vh',
                 width: '100vw',
