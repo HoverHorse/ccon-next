@@ -11,8 +11,9 @@ class Index extends React.Component {
         return (
             <div>
                 <Head>
-                    <title>My page title</title>
-                    <link rel="icon" type="image/ico" href="../public/favicon.ico?=v1"/>
+                    <title>Ccon Metals Inc. - The best catalytic converter scrap price</title>
+                    <meta desc="Sell catalytic converters with transparency, security, and integrity."/>
+                    <link rel="icon" type="image/ico" href="../public/favicon.ico"/>
                 </Head>
 
                 <App></App>
