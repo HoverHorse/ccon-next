@@ -454,12 +454,11 @@ class App extends React.Component {
             #bioContainer {
               width: 100%;
               height: 50%;
+              margin: auto;
               display: inline-block;
               margin-top: 110px;
-              margin-bottom: 0px;
               position: relative;
-              min-width: 650px;
-              
+              min-width: 500px;
               }
 
             #who {
@@ -495,7 +494,7 @@ class App extends React.Component {
               margin: auto;
               left: 0;
               min-width: 635px;
-              margin-top: -35px;
+              margin-top: 25px;
             }
 
             #corpButton {
@@ -503,7 +502,7 @@ class App extends React.Component {
               width: 90%;
               height: 50px;
               left: 0%;
-              margin-top: 120px;
+              margin-top: 180px;
               margin-left: 5vw;
             }
   
@@ -512,7 +511,7 @@ class App extends React.Component {
               width: 90%;
               height: 50px;
               left: 0%;
-              margin-top: 60px;
+              margin-top: 90px;
               margin-left: 5vw;
               margin-right: 0;
             }
@@ -527,8 +526,13 @@ class App extends React.Component {
             }
 
             #clickMe {
-              transform: translate(0, -60px)
-              
+              transform: translate(0px, 0px)
+              width: 100vw;
+              margin-top: 0;
+            }
+
+            #showcase {
+              width: 100vw;
             }
         
           }
