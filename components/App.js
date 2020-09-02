@@ -145,7 +145,7 @@ class App extends React.Component {
         
 
         
-        <BackgroundVideo autoplay mute loop/>
+        <BackgroundVideo />
         <a onClick={this.closeAll}><div id="clickAway" >
 
         </div></a>
