@@ -217,7 +217,6 @@ class App extends React.Component {
           <style jsx>{`
 
           #showcase {
-            
             height: 100vh;
             width: 100%;
           }
@@ -235,7 +234,6 @@ class App extends React.Component {
           .fadeIn {
             opacity: 1;
             transition: opacity 0.5s linear;
-            
           }
 
           .fadeOut {
@@ -250,8 +248,6 @@ class App extends React.Component {
             height: 100vh;
             width: 100%;
             box-sizing: border-box;
-            
-            
           }
           
           .Signature {
@@ -298,14 +294,12 @@ class App extends React.Component {
             font-size: 1.7em;
             height: 100%;
             text-shadow: 3px 3px black;
-            
           }
 
           #spanLink {
             font-size: 1.7em;
             height: 100%;
             text-shadow: 3px 3px black;
-            
           }
 
           #banner {
@@ -316,7 +310,6 @@ class App extends React.Component {
             color: white;
             border-top: 1px solid red;
             border-bottom: 1px solid red;
-            
           }
 
           #banner2 {
@@ -340,7 +333,6 @@ class App extends React.Component {
             min-width: 716px;
             margin: auto;
             z-Index: 4;
-            
           }
 
           #buttonContainer {
@@ -356,7 +348,6 @@ class App extends React.Component {
             width: 200px;
             height: 60px;
             margin-left: 4vw;
-            
           }
 
           #smallButton {
@@ -364,14 +355,12 @@ class App extends React.Component {
             height: 60px;
             margin-left: 4vw;
             margin-right: 4vw;
-            
           }
    
           #soloButton {
             margin-right: 4vw;
             width: 200px;
             height: 60px;
-            
           }
 
           #clickMe {
@@ -390,7 +379,6 @@ class App extends React.Component {
             top: 0;
             z-Index; 10;
             opacity: 0.99
-            
           }
 
           #bioContainer {
@@ -401,14 +389,12 @@ class App extends React.Component {
             margin-top: 225px;
             height: 300px;
             justify-content: space-evenly;
-            
             }
           
           #who {
             width: 200px;
             height: 60px;
             margin-right: 4vw;
-            
           }
 
           #what {
@@ -416,7 +402,6 @@ class App extends React.Component {
             height: 60px;
             margin-left: 4vw;
             margin-right: 4vw;
-            
           }
    
           #why {

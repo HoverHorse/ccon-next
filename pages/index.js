@@ -43,7 +43,7 @@ class Index extends React.Component {
                         @media (max-width: 720px) {
 
                             html, body, #__next, #next-body {
-                                width: 100vw;
+                                width: 100%;
                                 height: 100vh;
                                 max-height: 1200px;
                                 min-width: 600px;
