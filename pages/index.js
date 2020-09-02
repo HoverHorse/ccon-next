@@ -12,7 +12,7 @@ class Index extends React.Component {
             <div>
                 <Head>
                     <title>Ccon Metals Inc. - The best catalytic converter scrap price</title>
-                    <meta desc="Sell catalytic converters with transparency, security, and integrity."/>
+                    <meta name="viewport" content="width=device-width, initial-scale=1" desc="Sell catalytic converters with transparency, security, and integrity."/>
                     <link rel="icon" type="image/ico" href="../public/favicon.ico"/>
                 </Head>
 
