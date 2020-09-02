@@ -453,14 +453,14 @@ class App extends React.Component {
             }
 
             #contentContainer {
-              height: 80vh;
+              height: 100vh;
               transform: translate(0, -90px);
               min-height: 600px;
             }
 
             #bioContainer {
-              width: 100%;
-              height: 50%;
+              width: 100vw;
+              height: 50vh;
               margin: auto;
               display: inline-block;
               margin-top: 110px;
@@ -500,7 +500,7 @@ class App extends React.Component {
               height: 25vh;
               margin: auto;
               left: 0;
-              min-width: 635px;
+              min-width: 500px;
               margin-top: 25px;
             }
 
@@ -540,6 +540,7 @@ class App extends React.Component {
             }
 
             #showcase {
+              height: 100vh;
               width: 100vw;
             }
         
