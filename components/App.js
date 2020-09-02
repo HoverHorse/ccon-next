@@ -436,6 +436,13 @@ class App extends React.Component {
           }
 
           @media (max-width: 720px) {
+
+            .App {
+              text-align: center;
+              height: 100vh;
+              width: 100vw;
+            }
+
             #footerContainer {
               
             }
@@ -526,9 +533,10 @@ class App extends React.Component {
             }
 
             #clickMe {
-              transform: translate(0px, 0px)
+              transform: translate(0px, 0px);
               width: 100vw;
               margin-top: 0;
+              min-width: 500px;
             }
 
             #showcase {

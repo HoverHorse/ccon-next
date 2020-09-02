@@ -36,7 +36,7 @@ class ClickMe extends React.Component {
                         @media (max-width: 720px) {
 
                             #words {
-                                min-width: 512px;
+                                min-width: 500px;
                             }
 
                         }

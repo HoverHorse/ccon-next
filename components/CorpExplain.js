@@ -70,7 +70,8 @@ class CorpExplain extends React.Component {
                                 width: 50vw;
                                 height: 50px;
                                 margin-left: 200px;
-                                transform: translate(0%, -12px)
+                                transform: translate(0%, -15px);
+                                font-size: 1.1em;
                             }
 
                     }

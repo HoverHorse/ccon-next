@@ -94,7 +94,7 @@ class What extends React.Component {
                                 transform: translate(0, -370px);
                                 width: 90%;
                                 margin: auto;
-                                font-size: calc(12px + 1.3vw);
+                                font-size: 20px;
                                 text-shadow: 2px 2px 2px black;
                             }
 
