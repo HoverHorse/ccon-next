@@ -53,6 +53,13 @@ class Index extends React.Component {
     }
 }
 
+Index.getInitialProps = async function() {
+    // Fetch some data from an external API
+    return {
+      name: "Arunoda Susiripla"
+    }
+  }
+
 
 
 export default Index;
