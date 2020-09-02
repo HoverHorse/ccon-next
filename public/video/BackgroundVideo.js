@@ -5,13 +5,13 @@ class BackgroundVideo extends Component {
         super(props);
 
         this.state = {
-            videoURL: './video/BoxFillLoop.mp4'
+            videoURL: 'https://ccon-site.s3-us-west-2.amazonaws.com/BoxFillLoop.mp4'
         }
     }
 
     render () {
         return (
-            <video alt="Sell catalytic converters" id="background-video" type="video/mp4" loop autoPlay style={{
+            <video alt="Sell catalytic converters" id="background-video" type="video/mp4" loop="" autoPlay="&1" style={{
 
                 height: '100vh',
                 width: '100vw',
@@ -25,7 +25,6 @@ class BackgroundVideo extends Component {
 
             }}>
                 <source src={this.state.videoURL} type="video/mp4" />
-                <source src={this.state.videoURL} type="video/ogg" />
                 Your browser does not support the video tag.
             </video>
         )
