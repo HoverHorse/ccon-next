@@ -34,19 +34,15 @@ class Index extends React.Component {
                             -moz-osx-font-smoothing: grayscale;
                             
                             background-color: #282c34;
-                            width: 100%;
-                            max-height: 800px;
-                            
-                            min-width: 630px;
+                            width: 100vw;
+                            overflow: auto;
                           }
 
                         @media (max-width: 720px) {
 
                             html, body, #__next, #next-body {
-                                width: 100%;
+                                width: 100vw;
                                 height: 100vh;
-                                max-height: 1200px;
-                                min-width: 600px;
                                 overflow: hidden;
                             }
 

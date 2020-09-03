@@ -218,15 +218,15 @@ class App extends React.Component {
 
           #showcase {
             height: 100vh;
-            width: 100%;
+            width: 100vw;
           }
 
           #contentContainer {
             position: absolute;
             height: 65vh;
-            width: 90%;
-            top: 220px;
-            margin-left: 5%;
+            width: 90vw;
+            top: 25vh;
+            margin-left: 5vw;
             overflow-y: auto;
             overflow-x: hidden;
           }
@@ -246,7 +246,7 @@ class App extends React.Component {
           .App {
             text-align: center;
             height: 100vh;
-            width: 100%;
+            width: 100vw;
             box-sizing: border-box;
           }
           
@@ -256,17 +256,17 @@ class App extends React.Component {
             position: fixed;
             z-Index: 5;
             opacity: 1;
-            width: 100%;
-            height: 100px;
-            margin-top: 0px;
-            min-width: 630px;
+            width: 100vw;
+            height: 12vh;
+            margin-top: 0vh;
           }
           
           #logo {
-            width: 200px;
-            max-width: 200px;
-            margin-top: -30px;
-            margin-left: -30px;
+            min-width: 110px;
+            width: 17vw;
+            max-width: 141px;
+            margin-top: 0vh;
+            margin-left: 0vw;
             float: left;
             pointer-events: none;
           }
@@ -275,9 +275,13 @@ class App extends React.Component {
             font-family: Syncopate;
             font-size: 1.8em;
             margin-top: 52px;
-            margin-left: 90px;
-            width: 7.5em;
-            height: 0.95em;
+            margin-left: 94px;
+            min-width: 180px;
+            width: 25vw;
+            max-width: 250px;
+            min-height: 25px;
+            height: 3vh;
+            max-height: 30px;
             position: fixed;
             z-Index: -1;
             pointer-events: none;
@@ -287,7 +291,7 @@ class App extends React.Component {
 
           #revTag {
             color: red;
-            height: 100%;
+            height: 100vh;
           }
           
           #revLink {
@@ -303,7 +307,6 @@ class App extends React.Component {
           }
 
           #banner {
-            min-width: 716px;
             width: 80%;
             height: 100%;
             margin: auto;
@@ -313,7 +316,6 @@ class App extends React.Component {
           }
 
           #banner2 {
-            min-width: 716px;
             width: 80%;
             font-size: 1.7em;
             height: 100%;
@@ -327,10 +329,11 @@ class App extends React.Component {
           
           #bannerDiv {
             position: absolute;
-            height: 66px;
+            min-height: 66px;
+            height: 7.5%;
+            max-height: 75px;
             width: 100%;
-            top: 130px;
-            min-width: 716px;
+            top: 115px;
             margin: auto;
             z-Index: 4;
           }
@@ -345,13 +348,17 @@ class App extends React.Component {
           }
 
           #corpButton {
-            width: 200px;
+            min-width: 180px;
+            width: 15vw;
+            max-width: 220px;
             height: 60px;
             margin-left: 4vw;
           }
 
           #smallButton {
-            width: 200px;
+            min-width: 180px;
+            width: 15vw;
+            max-width: 220px;
             height: 60px;
             margin-left: 4vw;
             margin-right: 4vw;
@@ -359,7 +366,9 @@ class App extends React.Component {
    
           #soloButton {
             margin-right: 4vw;
-            width: 200px;
+            min-width: 180px;
+            width: 15vw;
+            max-width: 220px;
             height: 60px;
           }
 
@@ -387,7 +396,9 @@ class App extends React.Component {
             opacity: 0.99;
             display: inline-flex;
             margin-top: 225px;
-            height: 300px;
+            min-height: 255px;
+            height: 35vh;
+            max-height: 300px;
             justify-content: space-evenly;
             }
           

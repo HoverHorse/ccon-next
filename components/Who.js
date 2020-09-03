@@ -33,6 +33,7 @@ class Who extends React.Component {
                             text-align: center;
                             justify-content: center;
                         }
+                        
 
                         #whoImg {
                             height: 200px;
