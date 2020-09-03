@@ -422,6 +422,17 @@ class App extends React.Component {
 
           @media (max-width: 720px) {
 
+            .Signature {
+              width: 100vw;
+              height: 100px;
+              min-width: 360px;
+            }
+
+            #bannerDiv {
+              width: 100vw;
+              min-width: 360px;
+            }
+
             .App {
               text-align: center;
               height: 100vh;
