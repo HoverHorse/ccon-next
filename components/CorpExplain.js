@@ -46,7 +46,7 @@ class CorpExplain extends React.Component {
                                 position: absolute;
                                 width: 100%;
                                 height: 100%;
-                                transform: translate(0%, -50px)
+                                transform: translate(-28px, -20px);
                             }
 
                             .allText {
@@ -61,17 +61,18 @@ class CorpExplain extends React.Component {
                                 height: 50px;
                                 width: 90%;
                                 max-width: 200px;
-                                transform: translate(0%, -20px)
+                                transform: translate(-0px, 0px);
+                                
                             }
 
                             #corpExplain {
                                 position: absolute;
                                 color: white;
                                 pointer-events: none;
-                                width: 35vw;
+                                width: 55vw;
                                 height: 50px;
                                 margin-left: 200px;
-                                transform: translate(0%, -15px);
+                                transform: translate(0%, -0px);
                                 font-size: 1.1em;
                             }
 

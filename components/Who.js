@@ -30,8 +30,7 @@ class Who extends React.Component {
                         #whoContainer {
                             height: 100%;
                             width: 200px;
-                            text-align: center;
-                            justify-content: center;
+                            margin: auto;
                         }
                         
 
@@ -39,7 +38,7 @@ class Who extends React.Component {
                             height: 200px;
                             width: 200px;
                             background-color: black;
-                            margin: auto;
+                            
                             border-radius: 50%;
                             border: 2px black solid;
                             box-sizing: border-box;

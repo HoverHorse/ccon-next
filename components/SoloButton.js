@@ -15,16 +15,16 @@ class SoloButton extends React.Component {
             return (
                 <div id="buttons">
                     <div id="circle">
-                    <SoloExplain />
+                    
                     </div>
                     
-                      
+                    <SoloExplain />
                     
 
                     <style jsx>
                         {`
                             #circle {
-    
+                              margin: auto;
                                 background-color: hsl(0,0%,90%);
                                 box-shadow: inset hsla(0,0%,15%,  1) 0  0px 0px 4px, /* border */
                                 inset hsla(0,0%,15%, .8) 0 -1px 5px 4px, /* soft SD */
@@ -94,25 +94,24 @@ class SoloButton extends React.Component {
                             
                             
                               #buttons {
-                                justify-content: center;
-                                align-content: center;
+                          
                                 max-height: 75px;
                               }
-
+      
                               @media (max-width: 720px) {
-
                                 #buttons {
                                   display: inline-block;
-                                  height: 50px;
-                                  width: 100%;
-                                  margin: auto;
+                                        height: 50px;
+                                        width: 100%;
+                                        margin: auto;
                                 }
-
+      
                                 #circle {
-                                  width: 40vw;
+                                  width: 163px;
                                   max-width: 190px;
+                                  transform: translate(-10px, 0);
+                                  position: fixed;
                                 }
-                              
                               }
 
                               

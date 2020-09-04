@@ -21,7 +21,7 @@ class SmallButton extends React.Component {
                         {`
                         
                         #circle {
-    
+                          margin: auto;
                           background-color: hsl(0,0%,90%);
                           box-shadow: inset hsla(0,0%,15%,  1) 0  0px 0px 4px, /* border */
                           inset hsla(0,0%,15%, .8) 0 -1px 5px 4px, /* soft SD */
@@ -91,8 +91,7 @@ class SmallButton extends React.Component {
                       
                       
                         #buttons {
-                          justify-content: center;
-                          align-content: center;
+                          
                           max-height: 75px;
                         }
 
@@ -105,8 +104,10 @@ class SmallButton extends React.Component {
                           }
 
                           #circle {
-                            width: 40vw;
+                            width: 163px;
                             max-width: 190px;
+                            transform: translate(-10px, 0);
+                            position: fixed;
                           }
                         }
 

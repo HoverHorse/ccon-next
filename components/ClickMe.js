@@ -37,6 +37,7 @@ class ClickMe extends React.Component {
 
                             #words {
                                 min-width: 0px;
+                                width: 100%;
                             }
 
                         }

@@ -173,7 +173,7 @@ class App extends React.Component {
           </h2>
         </div>
 
-        <div id="showcase">
+      <div id="showcase">
         <div id="bioContainer" className={this.state.buttonFade}>
             <div id="who" className={this.state.buttonFade}><Who /></div>
             <div id="what" className={this.state.buttonFade}><What /></div>
@@ -201,7 +201,7 @@ class App extends React.Component {
               <CorpButton />
             </a>
           </div>
-          </div>
+      </div>
           
 
          <div id="contentContainer" className={this.state.contentFade}>
@@ -339,37 +339,37 @@ class App extends React.Component {
           }
 
           #buttonContainer {
-              width: 80%;
-              margin: auto;
-              transform: translate(0%, 0);
-              display: flex;
-              height: 60px;
-              justify-content: space-evenly;
+            width: 80%;
+            margin: auto;
+            opacity: 0.99;
+            display: inline-flex;
+            margin-top: 0px;
+            min-height: 0px;
+            height: 6vh;
+            max-height: 100px;
+            justify-content: space-evenly;
           }
 
           #corpButton {
-            min-width: 180px;
-            width: 15vw;
-            max-width: 220px;
+            margin-left: 0vw;
+            width: 25vw;
             height: 60px;
-            margin-left: 4vw;
+            min-width: 200px;
           }
 
           #smallButton {
-            min-width: 180px;
-            width: 15vw;
-            max-width: 220px;
+            width: 25vw;
             height: 60px;
             margin-left: 4vw;
             margin-right: 4vw;
+            min-width: 200px;
           }
-   
+
           #soloButton {
-            margin-right: 4vw;
-            min-width: 180px;
-            width: 15vw;
-            max-width: 220px;
+            width: 25vw;
             height: 60px;
+            margin-right: 0vw;
+            min-width: 200px;
           }
 
           #clickMe {
@@ -403,27 +403,27 @@ class App extends React.Component {
             }
           
           #who {
-            width: 33vw;
+            width: 25vw;
             height: 60px;
-            margin-right: 4vw;
+            margin-right: 0vw;
+            min-width: 200px;
           }
 
           #what {
-            width: 33vw;
+            width: 25vw;
             height: 60px;
             margin-left: 4vw;
             margin-right: 4vw;
+            min-width: 200px;
           }
    
           #why {
-            margin-left: 4vw;
-            width: 33vw;
+            margin-left: 0vw;
+            width: 25vw;
             height: 60px;
-            
+            min-width: 200px;
           }
 
-
-          
           #footerContainer {
               width: 310px;
               height: 100%;
@@ -437,6 +437,28 @@ class App extends React.Component {
             height: 100%;
             width: 33vw;
             
+          }
+
+          @media (max-width: 800px) {
+
+            .sigText {
+              font-family: Syncopate;
+              font-size: 1.8em;
+              margin-top: 38px;
+              margin-left: 82px;
+              min-width: 183px;
+              width: 25vw;
+              max-width: 250px;
+              min-height: 25px;
+              height: 3vh;
+              max-height: 30px;
+              position: fixed;
+              z-Index: -1;
+              pointer-events: none;
+              border-top: 1px solid red;
+              border-bottom: 1px solid red;
+            }
+
           }
 
           @media (max-width: 720px) {
@@ -457,7 +479,7 @@ class App extends React.Component {
             }
 
             #footerContainer {
-
+              
             }
 
             #bannerDiv{
@@ -519,7 +541,7 @@ class App extends React.Component {
               width: 90%;
               height: 50px;
               left: 0%;
-              margin-top: 180px;
+              margin-top: 140px;
               margin-left: 5vw;
             }
   
@@ -528,7 +550,7 @@ class App extends React.Component {
               width: 90%;
               height: 50px;
               left: 0%;
-              margin-top: 90px;
+              margin-top: 70px;
               margin-left: 5vw;
               margin-right: 0;
             }
@@ -553,6 +575,16 @@ class App extends React.Component {
               width: 100vw;
             }
         
+          }
+
+          @media (max-width: 596px) {
+
+            #footerContainer {
+              margin: auto;
+              width: 100%;
+              transform: translate(0vw, -18px);
+            }
+
           }
           `}</style>
       </div>

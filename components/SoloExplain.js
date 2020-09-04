@@ -18,7 +18,7 @@ class SoloExplain extends React.Component {
                         {`
 
                         #explainContainer {
-                            transform: translate(0%, 15px)
+                            transform: translate(0%, -75px)
                         }
 
                         .allText {
@@ -29,10 +29,8 @@ class SoloExplain extends React.Component {
                         #soloExplain {
                             color: white;
                             pointer-events: none;
-                            transform: translate(0%, 30px);
+                            transform: translate(0%, 5px);
                             font-size: calc(14px + 0.4vw);
-                            height: 10vh;
-                            
                         }
 
                         #soloButtonTag {
@@ -50,7 +48,7 @@ class SoloExplain extends React.Component {
                                 position: absolute;
                                 width: 100%;
                                 height: 50px;
-                                transform: translate(0%, -50px);
+                                transform: translate(-28px, -20px);
                             }
 
                             .allText {
@@ -64,17 +62,17 @@ class SoloExplain extends React.Component {
                                 position: absolute;
                                 height: 50px;
                                 width: 200px;
-                                transform: translate(0%, -20px);
+                                transform: translate(0px, 0px);
                             }
 
                             #soloExplain {
                                 position: absolute;
                                 color: white;
                                 pointer-events: none;
-                                width: 35vw;
+                                width: 55vw;
                                 height: 50px;
                                 margin-left: 200px;
-                                transform: translate(0px, -15px);
+                                transform: translate(0px, 10px);
                                 font-size: 1.1em;
                             }
 

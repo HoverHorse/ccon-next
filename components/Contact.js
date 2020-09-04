@@ -21,7 +21,7 @@ class Contact extends React.Component {
                       .contactButton {
                         font-family: Syncopate;
                         font-size: 1em;
-                        width: 310px;
+                        width: 320px;
                         height: 12%;
                         position: fixed;
                         z-Index: -1;
@@ -36,7 +36,8 @@ class Contact extends React.Component {
                       @media (max-width: 720px) {
 
                         .contactButton {
-                          width: 30vw;
+                          width: 320px;
+                          position: absolute;
                         }
 
                         #address {
@@ -47,6 +48,15 @@ class Contact extends React.Component {
                       }
 
                       @media (max-width: 596px) {
+
+                        .contactButton {
+                          width: 100%;
+                          
+                        }
+
+                        ul {
+                          text-align: center;
+                        }
 
                         #address {
                           opacity: 0;
