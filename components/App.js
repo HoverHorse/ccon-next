@@ -500,7 +500,7 @@ class App extends React.Component {
               max-height: 100vh;
               margin: auto;
               display: inline-block;
-              margin-top: 6em;
+              margin-top: 7em;
               position: relative;
               }
 
