@@ -105,9 +105,10 @@ class CorpButton extends React.Component {
                           }
 
                           #circle {
-                            width: 33vw;
+                            width: 40vw;
+                            max-width: 190px;
                           }
-                          
+
                         }
 
                         `}

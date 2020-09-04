@@ -67,7 +67,7 @@ class SmallExplain extends React.Component {
                                 position: absolute;
                                 color: white;
                                 pointer-events: none;
-                                width: 50vw;
+                                width: 35vw;
                                 height: 50px;
                                 margin-left: 200px;
                                 transform: translate(0%, -15px);

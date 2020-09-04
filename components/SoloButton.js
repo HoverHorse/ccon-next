@@ -15,9 +15,10 @@ class SoloButton extends React.Component {
             return (
                 <div id="buttons">
                     <div id="circle">
+                    <SoloExplain />
                     </div>
                     
-                      <SoloExplain />
+                      
                     
 
                     <style jsx>
@@ -108,7 +109,8 @@ class SoloButton extends React.Component {
                                 }
 
                                 #circle {
-                                  width: 33vw;
+                                  width: 40vw;
+                                  max-width: 190px;
                                 }
                               
                               }

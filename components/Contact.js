@@ -35,8 +35,13 @@ class Contact extends React.Component {
 
                       @media (max-width: 720px) {
 
+                        .contactButton {
+                          width: 30vw;
+                        }
+
                         #address {
                           opacity: 1;
+                          
                         }
 
                       }
