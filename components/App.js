@@ -444,12 +444,10 @@ class App extends React.Component {
             .Signature {
               width: 100vw;
               height: 100px;
-              min-width: 360px;
             }
 
             #bannerDiv {
               width: 100vw;
-              min-width: 360px;
             }
 
             .App {
@@ -470,7 +468,6 @@ class App extends React.Component {
             #contentContainer {
               height: 100vh;
               transform: translate(0, -90px);
-              min-height: 600px;
             }
 
             #bioContainer {
@@ -480,7 +477,6 @@ class App extends React.Component {
               display: inline-block;
               margin-top: 110px;
               position: relative;
-              min-width: 500px;
               }
 
             #who {
@@ -515,7 +511,6 @@ class App extends React.Component {
               height: 25vh;
               margin: auto;
               left: 0;
-              min-width: 500px;
               margin-top: 25px;
             }
 
@@ -551,7 +546,6 @@ class App extends React.Component {
               transform: translate(0px, 0px);
               width: 100vw;
               margin-top: 0;
-              min-width: 500px;
             }
 
             #showcase {
