@@ -403,13 +403,13 @@ class App extends React.Component {
             }
           
           #who {
-            width: 200px;
+            width: 33vw;
             height: 60px;
             margin-right: 4vw;
           }
 
           #what {
-            width: 200px;
+            width: 33vw;
             height: 60px;
             margin-left: 4vw;
             margin-right: 4vw;
@@ -417,18 +417,26 @@ class App extends React.Component {
    
           #why {
             margin-left: 4vw;
-            width: 200px;
+            width: 33vw;
             height: 60px;
             
           }
+
+
           
           #footerContainer {
-              width: 216px;
-              height: 27px;
-              float: right;
-              margin-top: 52px;
+              width: 310px;
+              height: 100%;
               text-align: center;
               display: inline-block;
+              float: right;
+              margin-right: 2vw;
+          }
+
+          a #footerLink {
+            height: 100%;
+            width: 33vw;
+            
           }
 
           @media (max-width: 720px) {
@@ -451,7 +459,7 @@ class App extends React.Component {
             }
 
             #footerContainer {
-              
+
             }
 
             #bannerDiv{

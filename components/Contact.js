@@ -21,12 +21,10 @@ class Contact extends React.Component {
                       .contactButton {
                         font-family: Syncopate;
                         font-size: 1em;
-                        width: 360px;
-                        height: 1em;
+                        width: 310px;
+                        height: 12%;
                         position: fixed;
                         z-Index: -1;
-                        transform: translate(-160px, -40px);
-                        
                       }
 
                       ul {
@@ -41,8 +39,12 @@ class Contact extends React.Component {
                           opacity: 1;
                         }
 
-                        .contactButton {
-                          transform: translate(-160px, -40px);
+                      }
+
+                      @media (max-width: 596px) {
+
+                        #address {
+                          opacity: 0;
                         }
 
                       }
