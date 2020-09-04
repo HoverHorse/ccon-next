@@ -107,6 +107,9 @@ class SoloButton extends React.Component {
                                   margin: auto;
                                 }
 
+                                #circle {
+                                  width: 33vw;
+                                }
                               
                               }
 

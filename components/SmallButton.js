@@ -103,6 +103,10 @@ class SmallButton extends React.Component {
                                   width: 100%;
                                   margin: auto;
                           }
+
+                          #circle {
+                            width: 33vw;
+                          }
                         }
 
                         `}
