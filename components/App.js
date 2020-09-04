@@ -496,10 +496,11 @@ class App extends React.Component {
 
             #bioContainer {
               width: 100vw;
-              height: 50vh;
+              height: 45vh;
+              max-height: 100vh;
               margin: auto;
               display: inline-block;
-              margin-top: 110px;
+              margin-top: 6em;
               position: relative;
               }
 
@@ -508,7 +509,7 @@ class App extends React.Component {
                 height: 33%;
                 margin-right: 0vw;
                 margin-top: 0px;
-                
+                min-height: 122px;
               }
     
             #what {
@@ -517,7 +518,7 @@ class App extends React.Component {
                 margin-right: 0vw;
                 margin-left: 0vw;
                 margin-top: 0px;
-                
+                min-height: 122px;
               }
        
             #why {
@@ -525,7 +526,7 @@ class App extends React.Component {
                 height: 33%;
                 margin-left: 0vw;
                 margin-top: 0px;
-                
+                min-height: 122px;
               }
 
             #buttonContainer{
