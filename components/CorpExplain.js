@@ -10,7 +10,7 @@ class CorpExplain extends React.Component {
             return (
                 <div id="explainContainer">
                     <div className="allText">
-                        <p id="corpButtonTag" >Multi-Location</p>
+                        <p id="corpButtonTag" style={{fontSize: "1.3em"}}>Multi-Location</p>
                         <p id="corpExplain">Multiple converter buyers from several physical locations.</p>
                     </div>
 
@@ -46,7 +46,7 @@ class CorpExplain extends React.Component {
                                 position: absolute;
                                 width: 100%;
                                 height: 100%;
-                                transform: translate(-28px, -20px);
+                                transform: translate(-35px, -20px);
                             }
 
                             .allText {
@@ -61,7 +61,7 @@ class CorpExplain extends React.Component {
                                 height: 50px;
                                 width: 90%;
                                 max-width: 200px;
-                                transform: translate(-0px, 0px);
+                                transform: translate(0px, 8px);
                                 
                             }
 
@@ -69,10 +69,10 @@ class CorpExplain extends React.Component {
                                 position: absolute;
                                 color: white;
                                 pointer-events: none;
-                                width: 55vw;
+                                width: 45vw;
                                 height: 50px;
                                 margin-left: 200px;
-                                transform: translate(0%, -0px);
+                                transform: translate(0%, 0px);
                                 font-size: 1.1em;
                             }
 

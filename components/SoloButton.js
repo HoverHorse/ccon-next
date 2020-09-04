@@ -107,7 +107,7 @@ class SoloButton extends React.Component {
                                 }
       
                                 #circle {
-                                  width: 163px;
+                                  width: 143px;
                                   max-width: 190px;
                                   transform: translate(-10px, 0);
                                   position: fixed;
