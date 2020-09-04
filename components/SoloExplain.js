@@ -48,7 +48,7 @@ class SoloExplain extends React.Component {
                                 position: absolute;
                                 width: 100%;
                                 height: 50px;
-                                transform: translate(-35px, -20px);
+                                
                             }
 
                             .allText {

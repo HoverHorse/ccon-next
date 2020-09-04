@@ -262,7 +262,7 @@ class App extends React.Component {
           }
           
           #logo {
-            min-width: 110px;
+            min-width: 85px;
             width: 17vw;
             max-width: 141px;
             margin-top: 0vh;
@@ -439,13 +439,13 @@ class App extends React.Component {
             
           }
 
-          @media (max-width: 800px) {
+          @media (max-width: 750px) {
 
             .sigText {
               font-family: Syncopate;
               font-size: 1.8em;
-              margin-top: 38px;
-              margin-left: 82px;
+              margin-top: 45px;
+              margin-left: 90px;
               min-width: 183px;
               width: 25vw;
               max-width: 250px;
@@ -583,6 +583,59 @@ class App extends React.Component {
               margin: auto;
               width: 100%;
               transform: translate(0vw, -18px);
+            }
+
+          }
+
+          @media (max-width: 640px) {
+
+            .sigText {
+              font-family: Syncopate;
+              font-size: 1.7em;
+              margin-top: 40px;
+              margin-left: 80px;
+            }
+
+          }
+
+          @media (max-width: 615px) {
+
+            .sigText {
+              font-family: Syncopate;
+              font-size: 1.6em;
+              margin-top: 35px;
+              margin-left: 70px;
+              width: 25vw;
+              max-width: 250px;
+              min-height: 22px;
+              height: 2vh;
+              max-height: 30px;
+              position: fixed;
+              z-Index: -1;
+              pointer-events: none;
+              border-top: 1px solid red;
+              border-bottom: 1px solid red;
+            }
+
+          }
+
+          @media (max-width: 560px) {
+
+            .sigText {
+              font-family: Syncopate;
+              font-size: 1.5em;
+              margin-top: 30px;
+              margin-left: 55px;
+              width: 25vw;
+              max-width: 250px;
+              min-height: 22px;
+              height: 2vh;
+              max-height: 30px;
+              position: fixed;
+              z-Index: -1;
+              pointer-events: none;
+              border-top: 1px solid red;
+              border-bottom: 1px solid red;
             }
 
           }
