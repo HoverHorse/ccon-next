@@ -86,11 +86,11 @@ class Why extends React.Component {
     
                             #whoContent {
                                 
-                                transform: translate(0, -370px);
+                                transform: translate(0, -400px);
                                 width: 90%;
                                 margin: auto;
                                 color: white;
-                                font-size: 20px;
+                                font-size: 18px;
                                 text-shadow: 2px 2px 2px black;
                             }
 

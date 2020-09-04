@@ -187,7 +187,7 @@ class App extends React.Component {
 
         
 
-         <div id="buttonContainer" className={this.state.buttonFade}>
+         {/* <div id="buttonContainer" className={this.state.buttonFade}>
             <a onClick={this.seeSolo}  id="soloButton" 
             style={{cursor:'pointer'}}>
               <SoloButton />
@@ -200,7 +200,9 @@ class App extends React.Component {
             <a onClick={this.seeCorp}  id="corpButton" style={{cursor:'pointer'}}>
               <CorpButton />
             </a>
-          </div>
+          </div> */}
+
+
       </div>
           
 

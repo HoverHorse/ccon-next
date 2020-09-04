@@ -90,11 +90,11 @@ class Who extends React.Component {
     
                             #whoContent {
                                 
-                                transform: translate(0, -385px);
+                                transform: translate(0, -405px);
                                 width: 90%;
                                 margin: auto;
                                 color: white;
-                                font-size: 20px;
+                                font-size: 18px;
                                 text-shadow: 2px 2px 2px black;
                             }
 
