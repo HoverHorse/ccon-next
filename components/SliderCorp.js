@@ -79,7 +79,10 @@ export default class Slider extends React.Component {
                             width: 75px;
                             z-index: 10;
                             transform: rotate(90deg)
+                            
                         }
+
+                        
 
                         .ChevronRight {
                             position: absolute;
@@ -89,16 +92,17 @@ export default class Slider extends React.Component {
                             transform: rotate(-90deg)
                         }
 
+
                         #left {
                             right: 40px;
                             top: 0px;
-                            filter: drop-shadow(4px 3px 3px black);
+                            
                         }
+
 
                         #right {
                             right: -40px;
                             top: -5px;
-                            filter: drop-shadow(-4px 3px 3px black);
                         }
 
                         .ChevronLeft::before,
@@ -106,16 +110,16 @@ export default class Slider extends React.Component {
                             position:absolute;
                             display:block;
                             content:"";
-                            border:35px solid transparent; /*adjust size*/
+                            border:35px solid transparent; 
                         }
-                        /*Change the four instances of 'top' below to rotate (top/right/bottom/left)*/
+                        
                         .ChevronLeft::before {
                             
-                            border-top-color:#b00; /*Chevron Color*/
+                            border-top-color:#b00; 
                         }
                         .ChevronLeft::after {
-                            top:-10px; /*adjust thickness*/
-                            border-top-color:#fff; /*Match background colour*/
+                            top:-10px; 
+                            border-top-color:#fff; 
                         }
 
                         .ChevronRight::before,
@@ -123,16 +127,16 @@ export default class Slider extends React.Component {
                             position:absolute;
                             display:block;
                             content:"";
-                            border:35px solid transparent; /*adjust size*/
+                            border:35px solid transparent; 
                         }
-                        /*Change the four instances of 'top' below to rotate (top/right/bottom/left)*/
+                        
                         .ChevronRight::before {
                             
-                            border-top-color:#b00; /*Chevron Color*/
+                            border-top-color:#b00;
                         }
                         .ChevronRight::after {
-                            top:-10px; /*adjust thickness*/
-                            border-top-color:#fff; /*Match background colour*/
+                            top:-10px;
+                            border-top-color:#fff;
                         }
 
                         #closeLink {
@@ -142,6 +146,16 @@ export default class Slider extends React.Component {
                             cursor: pointer;
                             right: 2.5%;
                             top: 4.5%;
+                            transition: all .2s ease-in-out;
+                        }
+
+                        #closeLink:hover { 
+                            color: #ff0000;
+                            filter: drop-shadow(0px 0px 2px #ff0000);
+                            -moz-transition: all 0.2s ease-in;
+                            -o-transition: all 0.2s ease-in;
+                            -webkit-transition: all 0.2s ease-in;
+                            transition: all 0.2s ease-in;
                         }
 
                         button {
@@ -162,10 +176,44 @@ export default class Slider extends React.Component {
 
                         #goLeft {
                             left: 0.5%;
+                            filter: drop-shadow(4px 3px 3px black);
+                            transition: all .2s ease-in-out;
+                        }
+
+                        #goLeft:hover { 
+                            color: #ffe100;
+                            filter: drop-shadow(0px 0px 10px #ffe100);
+                            -moz-transition: all 0.2s ease-in;
+                            -o-transition: all 0.2s ease-in;
+                            -webkit-transition: all 0.2s ease-in;
+                            transition: all 0.2s ease-in;
                         }
 
                         #goRight {
                             right: 0.5%;
+                            filter: drop-shadow(-4px 3px 3px black);
+                            transition: all .2s ease-in-out;
+                        }
+
+                        #goRight:hover { 
+                            color: #ffe100;
+                            filter: drop-shadow(0px 0px 10px #ffe100);
+                            -moz-transition: all 0.2s ease-in;
+                            -o-transition: all 0.2s ease-in;
+                            -webkit-transition: all 0.2s ease-in;
+                            transition: all 0.2s ease-in;
+                        }
+
+                        .my-transition {
+                            transition: transform;
+                        }
+
+                        .translate_100 {
+                            transform: translateX(100%)
+                        }
+
+                        .translate_200 {
+                            transform: translateX(200%)
                         }
 
                         .slider {
@@ -198,6 +246,7 @@ export default class Slider extends React.Component {
                             margin: auto;
                             transition: transform 0.5s;
                             transform: translateX(115%);
+                            
                         }
 
                         .slide3 {
@@ -211,28 +260,49 @@ export default class Slider extends React.Component {
 
                         @media (max-width: 720px) {
 
+                            .slider {
+                                min-height: 525px;
+                            }
+
+                            .slide3 {
+                                height: 89vh;
+                                margin-top: 0%
+                            }
+
+                            .slide2 {
+                                height: 89vh;
+                                margin-top: 0%
+                            }
+
+                            .slide1 {
+                                height: 89vh;
+                                margin-top: 0%
+                            }
+
                             #closeLink {
                                 top: 10px;
                                 right: 15px;
                             }
 
+                            #left {
+                                right: 43%;
+                                top: -44%;
+                            }
+    
+                            #right {
+                                right: -48%;
+                                top: -50%;
+                            }
+
                             .slider {
-                                min-height: 525px;
-                            }
-
-                            .slide1 {
-                                height: 80vh;
-                                margin-top: 0%
-                            }
-
-                            .slide2 {
-                                height: 80vh;
-                                margin-top: 0%
-                            }
-
-                            .slide3 {
-                                height: 80vh;
-                                margin-top: 0%
+                                width: 100%;
+                                height: 100%;
+                                box-sizing: border-box;
+                                display: flex;
+                                align-items: center;
+                                min-width: 250px;
+                                overflow: hidden;
+                                
                             }
                         }
 

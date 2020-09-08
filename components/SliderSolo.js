@@ -82,7 +82,10 @@ export default class SliderSolo extends React.Component {
                             width: 75px;
                             z-index: 10;
                             transform: rotate(90deg)
+                            
                         }
+
+                        
 
                         .ChevronRight {
                             position: absolute;
@@ -92,10 +95,13 @@ export default class SliderSolo extends React.Component {
                             transform: rotate(-90deg)
                         }
 
+
                         #left {
                             right: 40px;
                             top: 0px;
+                            
                         }
+
 
                         #right {
                             right: -40px;
@@ -143,7 +149,16 @@ export default class SliderSolo extends React.Component {
                             cursor: pointer;
                             right: 2.5%;
                             top: 4.5%;
-                            
+                            transition: all .2s ease-in-out;
+                        }
+
+                        #closeLink:hover { 
+                            color: #ff0000;
+                            filter: drop-shadow(0px 0px 2px #ff0000);
+                            -moz-transition: all 0.2s ease-in;
+                            -o-transition: all 0.2s ease-in;
+                            -webkit-transition: all 0.2s ease-in;
+                            transition: all 0.2s ease-in;
                         }
 
                         button {
@@ -164,12 +179,32 @@ export default class SliderSolo extends React.Component {
 
                         #goLeft {
                             left: 0.5%;
-                            filter: drop-shadow(-4px 3px 3px black);
+                            filter: drop-shadow(4px 3px 3px black);
+                            transition: all .2s ease-in-out;
+                        }
+
+                        #goLeft:hover { 
+                            color: #ffe100;
+                            filter: drop-shadow(0px 0px 10px #ffe100);
+                            -moz-transition: all 0.2s ease-in;
+                            -o-transition: all 0.2s ease-in;
+                            -webkit-transition: all 0.2s ease-in;
+                            transition: all 0.2s ease-in;
                         }
 
                         #goRight {
                             right: 0.5%;
-                            filter: drop-shadow(4px 3px 3px black);
+                            filter: drop-shadow(-4px 3px 3px black);
+                            transition: all .2s ease-in-out;
+                        }
+
+                        #goRight:hover { 
+                            color: #ffe100;
+                            filter: drop-shadow(0px 0px 10px #ffe100);
+                            -moz-transition: all 0.2s ease-in;
+                            -o-transition: all 0.2s ease-in;
+                            -webkit-transition: all 0.2s ease-in;
+                            transition: all 0.2s ease-in;
                         }
 
                         .my-transition {
@@ -233,23 +268,44 @@ export default class SliderSolo extends React.Component {
                             }
 
                             .slide3 {
-                                height: 80vh;
+                                height: 89vh;
                                 margin-top: 0%
                             }
 
                             .slide2 {
-                                height: 80vh;
+                                height: 89vh;
                                 margin-top: 0%
                             }
 
                             .slide1 {
-                                height: 80vh;
+                                height: 89vh;
                                 margin-top: 0%
                             }
 
                             #closeLink {
                                 top: 10px;
                                 right: 15px;
+                            }
+
+                            #left {
+                                right: 43%;
+                                top: -44%;
+                            }
+    
+                            #right {
+                                right: -48%;
+                                top: -50%;
+                            }
+
+                            .slider {
+                                width: 100%;
+                                height: 100%;
+                                box-sizing: border-box;
+                                display: flex;
+                                align-items: center;
+                                min-width: 250px;
+                                overflow: hidden;
+                                
                             }
                         }
 

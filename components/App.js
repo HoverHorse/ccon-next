@@ -487,8 +487,12 @@ class App extends React.Component {
             }
 
             #contentContainer {
-              height: 100vh;
-              transform: translate(0, -90px);
+              height: 100%;
+              width: 100vw;
+              position: absolute;
+              overflow-y: auto;
+              overflow-x: hidden;
+              transform: translate(-5%, -14%);
             }
 
             #bioContainer {

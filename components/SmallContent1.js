@@ -351,7 +351,7 @@ render() {
                       left: 50%;
                       top: 50%;
                       transform: translate(-50%, -50%);
-                      color: black;
+                      color: white;
                       font-size: calc(12px + 1.4vw);
                     }
   
