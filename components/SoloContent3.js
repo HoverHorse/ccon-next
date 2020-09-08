@@ -286,6 +286,7 @@ render() {
 
                     li {
                       margin-top: 2vh;
+                      font-size: calc(12px + 1vw);
                     }
                   }
 
