@@ -220,6 +220,7 @@ render() {
 
                     #outer-list {
                       height: 90%;
+                      width: 75%;
                     }
 
                     #inner-list-item {

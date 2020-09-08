@@ -236,12 +236,14 @@ class App extends React.Component {
           .fadeIn {
             opacity: 1;
             transition: opacity 0.5s linear;
+            
           }
 
           .fadeOut {
             opacity: 0;
             transition: opacity 0.5s linear;
             pointer-events: none;
+            z-Index: -5;
           }
 
 

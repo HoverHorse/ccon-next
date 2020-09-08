@@ -224,6 +224,7 @@ render() {
 
                     #outer-list {
                       height: 90%;
+                      width: 75%;
                     }
 
                     #inner-list-item {
@@ -286,7 +287,7 @@ render() {
 
                     li {
                       margin-top: 2vh;
-                      font-size: calc(12px + 1vw);
+                      font-size: calc(12px + 0.8vw);
                     }
                   }
 

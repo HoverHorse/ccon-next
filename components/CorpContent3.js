@@ -217,6 +217,7 @@ render() {
                   @media (max-width: 720px) {
                     #outer-list {
                       height: 90%;
+                      width: 75%;
                     }
 
                     #inner-list-item {
