@@ -23,8 +23,9 @@ class Contact extends React.Component {
                         font-size: 1em;
                         width: 320px;
                         height: 12%;
-                        position: fixed;
+                        position: absolute;
                         z-Index: -1;
+                        pointer-events: none;
                       }
 
                       ul {
