@@ -219,7 +219,7 @@ class App extends React.Component {
           <style jsx>{`
 
           #showcase {
-            height: 100vh;
+            height: 80vh;
             width: 100vw;
           }
 
@@ -255,7 +255,7 @@ class App extends React.Component {
           .Signature {
             font-family: Syncopate;
             color: rgb(192, 192, 192);
-            position: absolute;
+            position: relative;
             z-Index: 5;
             opacity: 1;
             width: 100vw;
@@ -293,7 +293,7 @@ class App extends React.Component {
 
           #revTag {
             color: red;
-            height: 100vh;
+            height: 100%;
           }
           
           #revLink {
@@ -313,8 +313,6 @@ class App extends React.Component {
             height: 100%;
             margin: auto;
             color: white;
-            border-top: 1px solid red;
-            border-bottom: 1px solid red;
           }
 
           #banner2 {
@@ -324,18 +322,16 @@ class App extends React.Component {
             text-shadow: 3px 3px black;
             margin: auto;
             color: white;
-            border-top: 1px solid red;
-            border-bottom: 1px solid red;
             transform: translateY(-100%);
           }
           
           #bannerDiv {
-            position: absolute;
+            position: relative;
             min-height: 66px;
             height: 7.5%;
             max-height: 75px;
             width: 100%;
-            top: 115px;
+            top: 0px;
             margin: auto;
             z-Index: 4;
           }
@@ -379,7 +375,7 @@ class App extends React.Component {
             width: 100%;
             font-size: 1.5em;
             position: relative;
-            margin-top: 70px;
+            margin-top: 80px;
           }
 
           #clickAway {
@@ -397,7 +393,7 @@ class App extends React.Component {
             margin: auto;
             opacity: 0.99;
             display: inline-flex;
-            margin-top: 225px;
+            margin-top: 40px;
             min-height: 255px;
             height: 35vh;
             max-height: 300px;
@@ -468,6 +464,7 @@ class App extends React.Component {
             .Signature {
               width: 100vw;
               height: 100px;
+              position: relative;
             }
 
             #bannerDiv {
@@ -500,7 +497,7 @@ class App extends React.Component {
               max-height: 100vh;
               margin: auto;
               display: inline-block;
-              margin-top: calc(5.5em + 1vh);
+              margin-top: 0px;
               position: relative;
               }
 
@@ -589,7 +586,6 @@ class App extends React.Component {
           @media (max-width: 640px) {
 
             .sigText {
-              font-family: Syncopate;
               font-size: 1.7em;
               margin-top: 40px;
               margin-left: 80px;
@@ -600,7 +596,6 @@ class App extends React.Component {
           @media (max-width: 615px) {
 
             .sigText {
-              font-family: Syncopate;
               font-size: 1.6em;
               margin-top: 35px;
               margin-left: 70px;
@@ -609,11 +604,7 @@ class App extends React.Component {
               min-height: 22px;
               height: 2vh;
               max-height: 30px;
-              position: absolute;
-              z-Index: -1;
               pointer-events: none;
-              border-top: 1px solid red;
-              border-bottom: 1px solid red;
             }
 
           }
@@ -621,7 +612,6 @@ class App extends React.Component {
           @media (max-width: 560px) {
 
             .sigText {
-              font-family: Syncopate;
               font-size: 1.5em;
               margin-top: 30px;
               margin-left: 55px;
@@ -630,11 +620,7 @@ class App extends React.Component {
               min-height: 22px;
               height: 2vh;
               max-height: 30px;
-              position: absolute;
-              z-Index: -1;
               pointer-events: none;
-              border-top: 1px solid red;
-              border-bottom: 1px solid red;
             }
 
             
@@ -644,36 +630,19 @@ class App extends React.Component {
           @media (max-width: 550px) {
 
             #buttonContainer{
-              position: relative;
-              display: inline-block;
-              width: 100vw;
-              height: 33%;
-              max-height: 100%;
-              margin: auto;
               margin-top: 3vh;
               justify-content: space-evenly;
             }
 
             #corpButton {
-              position: absolute;
-              width: 90%;
-              height: 33%;
-              margin: auto;
               transform: translate(-50%, 160px);
             }
   
             #smallButton {
-              position: absolute;
-              width: 90%;
-              height: 33%;
-              margin: auto;
               transform: translate(-50%, 80px);
             }
      
             #soloButton {
-              position: absolute;
-              width: 90%;
-              height: 33%;
               transform: translate(-50%, 0px);
             }
 
@@ -682,36 +651,18 @@ class App extends React.Component {
           @media (max-width: 541px) {
 
             #buttonContainer{
-              position: relative;
-              display: inline-block;
-              width: 100vw;
-              height: 33%;
-              max-height: 100%;
-              margin: auto;
               margin-top: 3vh;
-              justify-content: space-evenly;
             }
 
             #corpButton {
-              position: absolute;
-              width: 90%;
-              height: 33%;
-              margin: auto;
               transform: translate(-50%, 180px);
             }
   
             #smallButton {
-              position: absolute;
-              width: 90%;
-              height: 33%;
-              margin: auto;
               transform: translate(-50%, 80px);
             }
      
             #soloButton {
-              position: absolute;
-              width: 90%;
-              height: 33%;
               transform: translate(-50%, 0px);
             }
 
@@ -720,14 +671,7 @@ class App extends React.Component {
           @media (max-width: 350px) {
 
             #buttonContainer{
-              position: relative;
-              display: inline-block;
-              width: 100vw;
-              height: 33%;
-              max-height: 100%;
-              margin: auto;
               margin-top: 3vh;
-              justify-content: space-evenly;
               transform: translate(0%, 8%);
             }
 
@@ -736,36 +680,20 @@ class App extends React.Component {
           @media (max-width: 344px) {
 
             #buttonContainer{
-              position: relative;
-              display: inline-block;
-              width: 100vw;
-              height: 33%;
-              max-height: 100%;
-              margin: auto;
               margin-top: 3vh;
-              justify-content: space-evenly;
             }
 
             #corpButton {
-              position: absolute;
-              width: 90%;
-              height: 33%;
-              margin: auto;
               transform: translate(-50%, 200%);
             }
   
             #smallButton {
-              position: absolute;
-              width: 90%;
-              height: 33%;
-              margin: auto;
+
               transform: translate(-50%, 100%);
             }
      
             #soloButton {
-              position: absolute;
-              width: 90%;
-              height: 33%;
+
               transform: translate(-50%, 0%);
             }
 

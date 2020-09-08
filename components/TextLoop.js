@@ -14,8 +14,10 @@ class WordLoop extends React.Component {
                     #loopElement {
                         width: 100%;
                         height: 66px;
-                        margin-top: 0;
                         overflow: hidden;
+                        border-top: 1px solid red;
+                        border-bottom: 1px solid red;
+                        top: 0px;
                     }
 
                     #revTag {

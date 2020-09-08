@@ -35,18 +35,15 @@ class Index extends React.Component {
                             
                             background-color: #282c34;
                             width: 100vw;
-                            overflow: auto;
+                            overflow: hidden;
                           }
 
                         @media (max-width: 720px) {
 
-                            html, body {
-                                overflow: hidden;
-                            }
-
-                            #__next {
+                            #__next, #__next-body {
                                 width: 100vw;
                                 height: 100vh;
+                                
                                 overflow: auto;
                                 overflow-style: none;
                                 scrollbar: hidden;
