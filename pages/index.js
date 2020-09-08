@@ -40,7 +40,11 @@ class Index extends React.Component {
 
                         @media (max-width: 720px) {
 
-                            html, body, #__next, #next-body {
+                            html, body {
+                                overflow: hidden;
+                            }
+
+                            #__next {
                                 width: 100vw;
                                 height: 100vh;
                                 overflow: auto;
@@ -48,11 +52,11 @@ class Index extends React.Component {
                                 scrollbar: hidden;
                             }
 
-                            body::-webkit-scrollbar {
+                            #__next::-webkit-scrollbar {
                                 display: none;
                               }
 
-                            body {
+                            #__next {
                                 -ms-overflow-style: none;  /* IE and Edge */
                                 scrollbar-width: none;  /* Firefox */
                             }
