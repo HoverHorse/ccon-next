@@ -63,6 +63,52 @@ class SoloExplain extends React.Component {
                             
                         }
 
+                        @media (max-width: 550px) {
+
+                            #explainContainer{
+                                transform: translate(0%, -85%);
+                                
+                            }
+
+                            .allText {
+                                
+                            }
+
+                            #soloButtonTag {
+                                
+                            }
+
+                            #soloExplain {
+                                font-size: calc(14px + 1vw);
+                                transform: translate(0%, -40%);
+                            }
+
+                            
+                        }
+
+                        @media (max-width: 343px) {
+
+                            #explainContainer{
+                                transform: translate(0%, -65%);
+                                
+                            }
+
+                            .allText {
+                                
+                            }
+
+                            #soloButtonTag {
+                                
+                            }
+
+                            #soloExplain {
+                                font-size: calc(14px + 1vw);
+                                transform: translate(0%, -20%);
+                            }
+
+                            
+                        }
+
                             
                         
                         `}

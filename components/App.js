@@ -533,12 +533,13 @@ class App extends React.Component {
               position: absolute;
               display: inline-block;
               width: 100vw;
-              height: 33vh;
-              max-height: 100vh;
+              min-height: 400px;
+              height: 35vh;
+              max-height: 600px;
               margin: auto;
               left: 0;
-              margin-top: 25px;
-              justify-content: space-between;
+              margin-top: 3vh;
+              justify-content: space-evenly;
             }
 
             #corpButton {
@@ -643,7 +644,120 @@ class App extends React.Component {
               border-bottom: 1px solid red;
             }
 
+            
+
           }
+
+          @media (max-width: 550px) {
+
+            #buttonContainer{
+              position: absolute;
+              display: inline-block;
+              width: 100vw;
+              min-height: 400px;
+              height: 35vh;
+              max-height: 600px;
+              margin: auto;
+              left: 0;
+              margin-top: 3vh;
+              justify-content: space-evenly;
+            }
+
+            #corpButton {
+              position: absolute;
+              width: 90%;
+              height: 33%;
+              left: 0%;
+              margin-top: 20vh;
+              margin-left: 5vw;
+            }
+  
+            #smallButton {
+              position: absolute;
+              width: 90%;
+              height: 33%;
+              left: 0%;
+              margin-top: 9vh;
+              margin-left: 5vw;
+              margin-right: 0;
+            }
+     
+            #soloButton {
+              position: absolute;
+              width: 90%;
+              height: 33%;
+              left: 0%;
+              margin-right: 0;
+              margin-left: 5vw;
+            }
+
+          }
+
+          @media (max-width: 350px) {
+
+            #buttonContainer{
+              position: absolute;
+              display: inline-block;
+              width: 100vw;
+              min-height: 400px;
+              height: 35vh;
+              max-height: 600px;
+              margin: auto;
+              left: 0;
+              margin-top: 6vh;
+              justify-content: space-evenly;
+            }
+
+          }
+
+          @media (max-width: 343px) {
+
+            #buttonContainer{
+              position: absolute;
+              display: inline-block;
+              width: 100vw;
+              min-height: 400px;
+              height: 35vh;
+              max-height: 600px;
+              margin: auto;
+              left: 0;
+              margin-top: 6vh;
+              justify-content: space-evenly;
+            }
+
+            #corpButton {
+              position: absolute;
+              width: 90%;
+              height: 33%;
+              left: 0%;
+              margin-top: 22vh;
+              margin-left: 5vw;
+            }
+  
+            #smallButton {
+              position: absolute;
+              width: 90%;
+              height: 33%;
+              left: 0%;
+              margin-top: 11vh;
+              margin-left: 5vw;
+              margin-right: 0;
+            }
+     
+            #soloButton {
+              position: absolute;
+              width: 90%;
+              height: 33%;
+              left: 0%;
+              margin-right: 0;
+              margin-left: 5vw;
+            }
+
+          }
+
+
+          
+
           `}</style>
       </div>
     );

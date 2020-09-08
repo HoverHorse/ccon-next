@@ -60,6 +60,27 @@ class SmallExplain extends React.Component {
                             }
 
                     }
+
+                    @media (max-width: 542px) {
+
+                        #explainContainer{
+                            transform: translate(0%, -68%);
+                        }
+
+                        .allText {
+                            
+                        }
+
+                        #smallButtonTag {
+                            
+                        }
+
+                        #smallExplain {
+                            font-size: calc(14px + 1vw);
+                            transform: translate(0%, -20%);
+                        }
+
+                }
                         
                         `}
                     </style>

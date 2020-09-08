@@ -110,6 +110,21 @@ class SmallButton extends React.Component {
                           }
                         }
 
+                        @media (max-width: 550px) {
+                          #buttons {
+                            display: inline-block;
+                                  height: 50px;
+                                  width: 100%;
+                                  margin: auto;
+                          }
+
+                          #circle {
+                            width: 60%;
+                                  max-width: 190px;
+                                  
+                          }
+                        }
+
                         `}
                     </style>
                 </div>

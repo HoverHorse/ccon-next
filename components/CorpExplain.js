@@ -61,6 +61,27 @@ class CorpExplain extends React.Component {
 
                     }
 
+                    @media (max-width: 545px) {
+
+                        #explainContainer{
+                            transform: translate(0%, -70%);
+                        }
+
+                        .allText {
+                            
+                        }
+
+                        #corpButtonTag {
+                            
+                        }
+
+                        #corpExplain {
+                            font-size: calc(14px + 1vw);
+                            transform: translate(0%, -20%);
+                        }
+
+                }
+
                         `}
                     </style>
                 </div>
