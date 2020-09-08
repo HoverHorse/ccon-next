@@ -10,7 +10,7 @@ class CorpExplain extends React.Component {
             return (
                 <div id="explainContainer">
                     <div className="allText">
-                        <p id="corpButtonTag" style={{fontSize: "1.3em"}}>Multi-Location</p>
+                        <p id="corpButtonTag" >Multi-Location</p>
                         <p id="corpExplain">Multiple converter buyers from several physical locations.</p>
                     </div>
 
@@ -43,37 +43,20 @@ class CorpExplain extends React.Component {
                         @media (max-width: 720px) {
 
                             #explainContainer{
-                                position: absolute;
-                                width: 100%;
-                                height: 100%;
-                                transform: translate(-35px, -20px);
+                                transform: translate(0%, -85%);
                             }
 
                             .allText {
-                                position: absolute;
-                                width: 100%;
-                                height: 100%;
-                                margin: auto;
+                                
                             }
 
                             #corpButtonTag {
-                                position: absolute;
-                                height: 50px;
-                                width: 90%;
-                                max-width: 200px;
-                                transform: translate(0px, 8px);
                                 
                             }
 
                             #corpExplain {
-                                position: absolute;
-                                color: white;
-                                pointer-events: none;
-                                width: 45vw;
-                                height: 50px;
-                                margin-left: 200px;
-                                transform: translate(0%, 0px);
-                                font-size: 1.1em;
+                                font-size: calc(14px + 1vw);
+                                transform: translate(0%, -40%);
                             }
 
                     }

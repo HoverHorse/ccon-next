@@ -104,10 +104,9 @@ class SmallButton extends React.Component {
                           }
 
                           #circle {
-                            width: 143px;
-                            max-width: 190px;
-                            transform: translate(-3vw, 0);
-                            position: fixed;
+                            width: 60%;
+                                  max-width: 190px;
+                                  
                           }
                         }
 

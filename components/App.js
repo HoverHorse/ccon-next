@@ -187,7 +187,7 @@ class App extends React.Component {
 
         
 
-         {/* <div id="buttonContainer" className={this.state.buttonFade}>
+         <div id="buttonContainer" className={this.state.buttonFade}>
             <a onClick={this.seeSolo}  id="soloButton" 
             style={{cursor:'pointer'}}>
               <SoloButton />
@@ -200,7 +200,7 @@ class App extends React.Component {
             <a onClick={this.seeCorp}  id="corpButton" style={{cursor:'pointer'}}>
               <CorpButton />
             </a>
-          </div> */}
+          </div>
 
 
       </div>
@@ -481,7 +481,7 @@ class App extends React.Component {
             }
 
             #footerContainer {
-              
+              height: 48%;
             }
 
             #bannerDiv{
@@ -531,29 +531,31 @@ class App extends React.Component {
 
             #buttonContainer{
               position: absolute;
-              display: inline-flexbox;
+              display: inline-block;
               width: 100vw;
-              height: 25vh;
+              height: 33vh;
+              max-height: 100vh;
               margin: auto;
               left: 0;
               margin-top: 25px;
+              justify-content: space-between;
             }
 
             #corpButton {
               position: absolute;
               width: 90%;
-              height: 50px;
+              height: 33%;
               left: 0%;
-              margin-top: 140px;
+              margin-top: 20vh;
               margin-left: 5vw;
             }
   
             #smallButton {
               position: absolute;
               width: 90%;
-              height: 50px;
+              height: 33%;
               left: 0%;
-              margin-top: 70px;
+              margin-top: 10vh;
               margin-left: 5vw;
               margin-right: 0;
             }
@@ -561,7 +563,7 @@ class App extends React.Component {
             #soloButton {
               position: absolute;
               width: 90%;
-              height: 50px;
+              height: 33%;
               left: 0%;
               margin-right: 0;
               margin-left: 5vw;

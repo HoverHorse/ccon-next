@@ -80,7 +80,7 @@ class Why extends React.Component {
                                 box-sizing: border-box;
                                 top: 50%;
                                 left: 50%;
-                                transform: translate(0%, -30%);
+                                transform: translate(0%, -40%);
                                 
                             }
     

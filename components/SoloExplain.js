@@ -18,18 +18,16 @@ class SoloExplain extends React.Component {
                         {`
 
                         #explainContainer {
-                            transform: translate(0%, -75px)
+                            transform: translate(0%, -68px)
                         }
 
                         .allText {
-                            transform: translate(0%, 0%)
                             
                         }
                                                 
                         #soloExplain {
                             color: white;
                             pointer-events: none;
-                            transform: translate(0%, 5px);
                             font-size: calc(14px + 0.4vw);
                         }
 
@@ -38,42 +36,28 @@ class SoloExplain extends React.Component {
                             font-size: 1.5em;
                             color: black;
                             text-decoration: underline;
-                            transform: translate(0%, 6px);
+
                           }
                         
 
                         @media (max-width: 720px) {
 
                             #explainContainer{
-                                position: absolute;
-                                width: 100%;
-                                height: 50px;
+                                transform: translate(0%, -85%);
                                 
                             }
 
                             .allText {
-                                position: absolute;
-                                width: 100%;
-                                height: 50px;
-                                margin: auto;
+                                
                             }
 
                             #soloButtonTag {
-                                position: absolute;
-                                height: 50px;
-                                width: 200px;
-                                transform: translate(0px, 0px);
+                                
                             }
 
                             #soloExplain {
-                                position: absolute;
-                                color: white;
-                                pointer-events: none;
-                                width: 45vw;
-                                height: 50px;
-                                margin-left: 200px;
-                                transform: translate(0px, 0px);
-                                font-size: 1.1em;
+                                font-size: calc(14px + 1vw);
+                                transform: translate(0%, -40%);
                             }
 
                             
@@ -89,3 +73,36 @@ class SoloExplain extends React.Component {
     }
 
 export default SoloExplain;
+
+
+// #explainContainer{
+//     position: absolute;
+//     width: 100%;
+//     height: 50px;
+    
+// }
+
+// .allText {
+//     position: absolute;
+//     width: 100%;
+//     height: 50px;
+//     margin: auto;
+// }
+
+// #soloButtonTag {
+//     position: absolute;
+//     height: 50px;
+//     width: 200px;
+//     transform: translate(0px, 0px);
+// }
+
+// #soloExplain {
+//     position: absolute;
+//     color: white;
+//     pointer-events: none;
+//     width: 45vw;
+//     height: 50px;
+//     margin-left: 200px;
+//     transform: translate(0px, 0px);
+//     font-size: 1.1em;
+// }
