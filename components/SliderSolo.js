@@ -268,17 +268,17 @@ export default class SliderSolo extends React.Component {
                             }
 
                             .slide3 {
-                                height: 85vh;
+                                height: 80vh;
                                 margin-top: 0%
                             }
 
                             .slide2 {
-                                height: 85vh;
+                                height: 80vh;
                                 margin-top: 0%
                             }
 
                             .slide1 {
-                                height: 85vh;
+                                height: 80vh;
                                 margin-top: 0%
                             }
 
