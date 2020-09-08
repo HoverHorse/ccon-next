@@ -545,7 +545,7 @@ class App extends React.Component {
               width: 90%;
               height: 33%;
               margin: auto;
-              transform: translate(-50%, 160%);
+              transform: translate(-50%, 160px);
             }
   
             #smallButton {
@@ -553,7 +553,7 @@ class App extends React.Component {
               width: 90%;
               height: 33%;
               margin: auto;
-              transform: translate(-50%, 80%);
+              transform: translate(-50%, 80px);
             }
      
             #soloButton {
@@ -659,7 +659,7 @@ class App extends React.Component {
               width: 90%;
               height: 33%;
               margin: auto;
-              transform: translate(-50%, 160%);
+              transform: translate(-50%, 160px);
             }
   
             #smallButton {
@@ -667,14 +667,14 @@ class App extends React.Component {
               width: 90%;
               height: 33%;
               margin: auto;
-              transform: translate(-50%, 80%);
+              transform: translate(-50%, 80px);
             }
      
             #soloButton {
               position: absolute;
               width: 90%;
               height: 33%;
-              transform: translate(-50%, 0);
+              transform: translate(-50%, 0px);
             }
 
           }
@@ -697,7 +697,7 @@ class App extends React.Component {
               width: 90%;
               height: 33%;
               margin: auto;
-              transform: translate(-50%, 180%);
+              transform: translate(-50%, 180px);
             }
   
             #smallButton {
@@ -705,14 +705,14 @@ class App extends React.Component {
               width: 90%;
               height: 33%;
               margin: auto;
-              transform: translate(-50%, 80%);
+              transform: translate(-50%, 80px);
             }
      
             #soloButton {
               position: absolute;
               width: 90%;
               height: 33%;
-              transform: translate(-50%, 0);
+              transform: translate(-50%, 0px);
             }
 
           }
