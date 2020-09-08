@@ -151,7 +151,7 @@ class App extends React.Component {
         </div></a>
 
 
-        <div className="Signature">
+        <div className={this.state.buttonFade} id="signature">
           <img id="logo" src={cconTriangle} alt="catalytic converter scrap price" />
             <h1 className="sigText">
                 METALS
@@ -252,12 +252,11 @@ class App extends React.Component {
             box-sizing: border-box;
           }
           
-          .Signature {
+          #signature {
             font-family: Syncopate;
             color: rgb(192, 192, 192);
             position: relative;
             z-Index: 5;
-            opacity: 1;
             width: 100vw;
             height: 12vh;
             margin-top: 0vh;
@@ -461,7 +460,7 @@ class App extends React.Component {
 
           @media (max-width: 720px) {
 
-            .Signature {
+            #signature {
               width: 100vw;
               height: 100px;
               position: relative;
@@ -487,12 +486,12 @@ class App extends React.Component {
             }
 
             #contentContainer {
-              height: 85vh;
+              height: 99vh;
               width: 100vw;
               position: absolute;
               overflow-y: auto;
               overflow-x: hidden;
-              transform: translate(-5%, -15%);
+              transform: translate(-5%, -25%);
             }
 
             #bioContainer {
