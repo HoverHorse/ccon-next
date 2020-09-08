@@ -713,7 +713,7 @@ class App extends React.Component {
           @media (max-width: 343px) {
 
             #buttonContainer{
-              position: absolute;
+              position: relative;
               display: inline-block;
               width: 100vw;
               min-height: 400px;
@@ -726,7 +726,7 @@ class App extends React.Component {
             }
 
             #corpButton {
-              position: absolute;
+              position: relative;
               width: 90%;
               height: 33%;
               left: 0%;
@@ -735,7 +735,7 @@ class App extends React.Component {
             }
   
             #smallButton {
-              position: absolute;
+              position: relative;
               width: 90%;
               height: 33%;
               left: 0%;
@@ -745,7 +745,7 @@ class App extends React.Component {
             }
      
             #soloButton {
-              position: absolute;
+              position: relative;
               width: 90%;
               height: 33%;
               left: 0%;
