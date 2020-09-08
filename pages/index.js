@@ -24,7 +24,7 @@ class Index extends React.Component {
                             src: local('Syncopate-Bold'), url(./fonts/Syncopate-Bold.ttf) format('truetype');
                           }
                           
-                          html, body, #__next, #next-body {
+                          html, body {
                             margin: auto;
                             margin-top: 0;
                             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -36,6 +36,12 @@ class Index extends React.Component {
                             background-color: #282c34;
                             width: 100vw;
                             overflow: hidden;
+                          }
+
+                          #__next, #next-body {
+                            width: 100vw;
+                            
+                            
                           }
 
                         @media (max-width: 720px) {

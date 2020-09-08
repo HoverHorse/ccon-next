@@ -16,7 +16,7 @@ class Who extends React.Component {
                     <div id="imgContainer" style={{textAlign: "center"}}>
                     <img id="whoImg" src={this.state.imgURL} style={{}}></img>
                     <div id="whoContent">
-                        <strong><u style={{textShadow: "1px 1px 1px black"}}>Who we are:</u></strong><br />
+                        <strong><u id="whoTitle">Who we are:</u></strong><br />
                         Since 2005 Ccon Metals has served the precious metal recycling industry with our fully equipped processing facility in Abbotsford B.C.
                     </div>
                     </div>
@@ -51,6 +51,10 @@ class Who extends React.Component {
                             transform: translate(0, 0px);
                             font-size: calc(12px + 0.3vw);
                             
+                        }
+
+                        #whoTitle {
+                            text-shadow: 1px 1px 1px black;
                         }
 
                         @media (max-width: 720px) {
@@ -93,9 +97,13 @@ class Who extends React.Component {
                                 transform: translate(0, -405px);
                                 width: 90%;
                                 margin: auto;
-                                color: white;
+                                color: black;
                                 font-size: 18px;
-                                text-shadow: 2px 2px 1px black;
+                                text-shadow: 2px 2px 1px white;
+                            }
+
+                            #whoTitle {
+                                text-shadow: 2px 2px 1px white;
                             }
 
                         }
