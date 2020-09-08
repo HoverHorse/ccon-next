@@ -280,14 +280,14 @@ render() {
                       
                       padding: 0;
                       justify-content: space-evenly;
-                      height: 75%;
+                      height: 70%;
                       width: 80%;
                       margin: auto;
                     }
 
                     li {
                       margin-top: 2vh;
-                      font-size: calc(12px + 0.8vw);
+                      font-size: calc(12px + 0.6vw);
                     }
                   }
 

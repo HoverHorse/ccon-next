@@ -220,7 +220,7 @@ render() {
 
                     #outer-list {
                       height: 90%;
-                      width: 75%;
+                      width: 70%;
                     }
 
                     #inner-list-item {
@@ -276,13 +276,14 @@ render() {
                       
                       padding: 0;
                       justify-content: space-evenly;
-                      height: 75%;
+                      height: 70%;
                       width: 80%;
                       margin: auto;
                     }
 
                     li {
                       margin-top: 2vh;
+                      font-size: calc(12px + 0.6vw);
                     }
                   }
 
