@@ -255,7 +255,7 @@ class App extends React.Component {
           .Signature {
             font-family: Syncopate;
             color: rgb(192, 192, 192);
-            position: fixed;
+            position: absolute;
             z-Index: 5;
             opacity: 1;
             width: 100vw;
@@ -284,7 +284,7 @@ class App extends React.Component {
             min-height: 25px;
             height: 3vh;
             max-height: 30px;
-            position: fixed;
+            position: absolute;
             z-Index: -1;
             pointer-events: none;
             border-top: 1px solid red;
@@ -454,7 +454,7 @@ class App extends React.Component {
               min-height: 25px;
               height: 3vh;
               max-height: 30px;
-              position: fixed;
+              position: absolute;
               z-Index: -1;
               pointer-events: none;
               border-top: 1px solid red;
@@ -609,7 +609,7 @@ class App extends React.Component {
               min-height: 22px;
               height: 2vh;
               max-height: 30px;
-              position: fixed;
+              position: absolute;
               z-Index: -1;
               pointer-events: none;
               border-top: 1px solid red;
@@ -630,7 +630,7 @@ class App extends React.Component {
               min-height: 22px;
               height: 2vh;
               max-height: 30px;
-              position: fixed;
+              position: absolute;
               z-Index: -1;
               pointer-events: none;
               border-top: 1px solid red;

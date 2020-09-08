@@ -43,7 +43,18 @@ class Index extends React.Component {
                             html, body, #__next, #next-body {
                                 width: 100vw;
                                 height: 100vh;
-                                overflow: hidden;
+                                overflow: auto;
+                                overflow-style: none;
+                                scrollbar: hidden;
+                            }
+
+                            body::-webkit-scrollbar {
+                                display: none;
+                              }
+
+                            body {
+                                -ms-overflow-style: none;  /* IE and Edge */
+                                scrollbar-width: none;  /* Firefox */
                             }
 
                         }
