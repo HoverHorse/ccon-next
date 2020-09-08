@@ -487,7 +487,7 @@ class App extends React.Component {
             }
 
             #contentContainer {
-              height: 100%;
+              height: 99%;
               width: 100vw;
               position: absolute;
               overflow-y: auto;
