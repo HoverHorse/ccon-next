@@ -267,17 +267,17 @@ export default class Slider extends React.Component {
                             }
 
                             .slide3 {
-                                height: 89vh;
+                                height: 85vh;
                                 margin-top: 0%
                             }
 
                             .slide2 {
-                                height: 89vh;
+                                height: 85vh;
                                 margin-top: 0%
                             }
 
                             .slide1 {
-                                height: 89vh;
+                                height: 85vh;
                                 margin-top: 0%
                             }
 
@@ -288,12 +288,12 @@ export default class Slider extends React.Component {
 
                             #left {
                                 right: 43%;
-                                top: -44%;
+                                top: 0%;
                             }
     
                             #right {
                                 right: -48%;
-                                top: -50%;
+                                top: -7.5%;
                             }
 
                             .slider {
