@@ -340,7 +340,7 @@ render() {
                       transform: translate(-50%, -50%);
                       width: 75%;
                       color: white;
-                      font-size: calc(18px + 1.4vw);
+                      font-size: calc(12px + 2.8vw);
                     }
   
                     #cardText2 {
@@ -350,7 +350,7 @@ render() {
                       top: 50%;
                       transform: translate(-50%, -50%);
                       color: white;
-                      font-size: calc(18px + 1.4vw);
+                      font-size: calc(12px + 2.8vw);
                     }
   
                     #cardText3 {
@@ -360,7 +360,7 @@ render() {
                       transform: translate(-50%, -50%);
                       width: 75%;
                       color: white;
-                      font-size: calc(16px + 1.2vw);
+                      font-size: calc(12px + 2.2vw);
                     }
                   }
 
