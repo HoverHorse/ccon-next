@@ -9,6 +9,7 @@ class SmallButton extends React.Component {
         };
 
         render() {
+          if (this.props.visible === "fadeIn") {
             return (
                 <div id="buttons">
                     <div id="circle">
@@ -130,6 +131,9 @@ class SmallButton extends React.Component {
                     </style>
                 </div>
             )
+          } else {
+            return null;
+          }
         }
     }
 

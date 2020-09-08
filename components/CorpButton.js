@@ -9,6 +9,7 @@ class CorpButton extends React.Component {
         };
 
         render() {
+          if (this.props.visible === "fadeIn") {
             return (
                 <div id="buttons">
                     <div id="circle">
@@ -116,6 +117,9 @@ class CorpButton extends React.Component {
                     </style>
                 </div>
             )
+          } else {
+            return null;
+          }
         }
     }
 

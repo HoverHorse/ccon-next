@@ -190,15 +190,15 @@ class App extends React.Component {
          <div id="buttonContainer" className={this.state.buttonFade}>
             <a onClick={this.seeSolo}  id="soloButton" 
             style={{cursor:'pointer'}}>
-              <SoloButton />
+              <SoloButton visible={this.state.buttonFade} />
             </a>
 
             <a onClick={this.seeSmall}  id="smallButton" style={{cursor:'pointer'}}>
-              <SmallButton />
+              <SmallButton visible={this.state.buttonFade} />
             </a>
 
             <a onClick={this.seeCorp}  id="corpButton" style={{cursor:'pointer'}}>
-              <CorpButton />
+              <CorpButton visible={this.state.buttonFade} />
             </a>
           </div>
 

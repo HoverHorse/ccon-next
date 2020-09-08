@@ -11,7 +11,7 @@ class SoloButton extends React.Component {
 
 
         render() {
-
+          if (this.props.visible === "fadeIn") {
             return (
                 <div id="buttons">
                     <div id="circle">
@@ -122,6 +122,9 @@ class SoloButton extends React.Component {
 
                 </div>
             )
+          } else {
+            return null;
+          }
         }
     }
 
