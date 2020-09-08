@@ -101,15 +101,16 @@ class SoloButton extends React.Component {
                               @media (max-width: 720px) {
                                 #buttons {
                                   display: inline-block;
-                                        height: 50px;
-                                        width: 100%;
-                                        margin: auto;
+                                  height: 100%;
+                                  max-height: 33%;
+                                  width: 100%;
+                                  margin: auto;
                                 }
       
                                 #circle {
                                   width: 60%;
                                   max-width: 190px;
-                                  
+                                  min-width: 171px;
                                 }
                               }
 

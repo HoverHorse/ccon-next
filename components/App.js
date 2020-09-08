@@ -389,7 +389,7 @@ class App extends React.Component {
             background: transparent;
             top: 0;
             z-Index; 10;
-            opacity: 0.99
+            opacity: 0.99;
           }
 
           #bioContainer {
@@ -530,14 +530,12 @@ class App extends React.Component {
               }
 
             #buttonContainer{
-              position: absolute;
+              position: relative;
               display: inline-block;
               width: 100vw;
-              min-height: 400px;
-              height: 35vh;
-              max-height: 600px;
+              height: 33%;
+              max-height: 100%;
               margin: auto;
-              left: 0;
               margin-top: 3vh;
               justify-content: space-evenly;
             }
@@ -546,28 +544,23 @@ class App extends React.Component {
               position: absolute;
               width: 90%;
               height: 33%;
-              left: 0%;
-              margin-top: 20vh;
-              margin-left: 5vw;
+              margin: auto;
+              transform: translate(-50%, 160%);
             }
   
             #smallButton {
               position: absolute;
               width: 90%;
               height: 33%;
-              left: 0%;
-              margin-top: 10vh;
-              margin-left: 5vw;
-              margin-right: 0;
+              margin: auto;
+              transform: translate(-50%, 80%);
             }
      
             #soloButton {
               position: absolute;
               width: 90%;
               height: 33%;
-              left: 0%;
-              margin-right: 0;
-              margin-left: 5vw;
+              transform: translate(-50%, 0);
             }
 
             #clickMe {
@@ -651,14 +644,12 @@ class App extends React.Component {
           @media (max-width: 550px) {
 
             #buttonContainer{
-              position: absolute;
+              position: relative;
               display: inline-block;
               width: 100vw;
-              min-height: 400px;
-              height: 35vh;
-              max-height: 600px;
+              height: 33%;
+              max-height: 100%;
               margin: auto;
-              left: 0;
               margin-top: 3vh;
               justify-content: space-evenly;
             }
@@ -667,28 +658,61 @@ class App extends React.Component {
               position: absolute;
               width: 90%;
               height: 33%;
-              left: 0%;
-              margin-top: 20vh;
-              margin-left: 5vw;
+              margin: auto;
+              transform: translate(-50%, 160%);
             }
   
             #smallButton {
               position: absolute;
               width: 90%;
               height: 33%;
-              left: 0%;
-              margin-top: 9vh;
-              margin-left: 5vw;
-              margin-right: 0;
+              margin: auto;
+              transform: translate(-50%, 80%);
             }
      
             #soloButton {
               position: absolute;
               width: 90%;
               height: 33%;
-              left: 0%;
-              margin-right: 0;
-              margin-left: 5vw;
+              transform: translate(-50%, 0);
+            }
+
+          }
+
+          @media (max-width: 541px) {
+
+            #buttonContainer{
+              position: relative;
+              display: inline-block;
+              width: 100vw;
+              height: 33%;
+              max-height: 100%;
+              margin: auto;
+              margin-top: 3vh;
+              justify-content: space-evenly;
+            }
+
+            #corpButton {
+              position: absolute;
+              width: 90%;
+              height: 33%;
+              margin: auto;
+              transform: translate(-50%, 180%);
+            }
+  
+            #smallButton {
+              position: absolute;
+              width: 90%;
+              height: 33%;
+              margin: auto;
+              transform: translate(-50%, 80%);
+            }
+     
+            #soloButton {
+              position: absolute;
+              width: 90%;
+              height: 33%;
+              transform: translate(-50%, 0);
             }
 
           }
@@ -696,61 +720,53 @@ class App extends React.Component {
           @media (max-width: 350px) {
 
             #buttonContainer{
-              position: absolute;
+              position: relative;
               display: inline-block;
               width: 100vw;
-              min-height: 400px;
-              height: 35vh;
-              max-height: 600px;
+              height: 33%;
+              max-height: 100%;
               margin: auto;
-              left: 0;
-              margin-top: 6vh;
+              margin-top: 3vh;
               justify-content: space-evenly;
+              transform: translate(0%, 8%);
             }
 
           }
 
-          @media (max-width: 343px) {
+          @media (max-width: 344px) {
 
             #buttonContainer{
               position: relative;
               display: inline-block;
               width: 100vw;
-              min-height: 400px;
-              height: 35vh;
-              max-height: 600px;
+              height: 33%;
+              max-height: 100%;
               margin: auto;
-              left: 0;
-              margin-top: 6vh;
+              margin-top: 3vh;
               justify-content: space-evenly;
             }
 
             #corpButton {
-              position: relative;
+              position: absolute;
               width: 90%;
               height: 33%;
-              left: 0%;
-              margin-top: 22vh;
-              margin-left: 5vw;
+              margin: auto;
+              transform: translate(-50%, 200%);
             }
   
             #smallButton {
-              position: relative;
+              position: absolute;
               width: 90%;
               height: 33%;
-              left: 0%;
-              margin-top: 11vh;
-              margin-left: 5vw;
-              margin-right: 0;
+              margin: auto;
+              transform: translate(-50%, 100%);
             }
      
             #soloButton {
-              position: relative;
+              position: absolute;
               width: 90%;
               height: 33%;
-              left: 0%;
-              margin-right: 0;
-              margin-left: 5vw;
+              transform: translate(-50%, 0%);
             }
 
           }
