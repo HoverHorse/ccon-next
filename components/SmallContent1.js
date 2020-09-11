@@ -29,11 +29,19 @@ class SmallContent1 extends React.Component {
 }
 
 flip1() {
+  if (window.innerWidth > 720) {
   this.setState({ className1 : "flipCard is-flipped", fadeOneA : "fade", fadeOneB : "unFade" })
+} else {
+  return null
+}
 }
 
 unflip1() {
+  if (window.innerWidth > 720) {
   this.setState({ className1 : "flipCard", fadeOneA : "unFade", fadeOneB : "fade" })
+} else {
+  return null
+}
 }
 
 toggleFlip1() {
@@ -49,11 +57,19 @@ toggleFlip1() {
 }
 
 flip2() {
+  if (window.innerWidth > 720) {
   this.setState({ className2 : "flipCard is-flipped", fadeTwoA : "fade", fadeTwoB : "unFade" })
+} else {
+  return null
+}
 }
 
 unflip2() {
+  if (window.innerWidth > 720) {
   this.setState({ className2 : "flipCard", fadeTwoA : "unFade", fadeTwoB : "fade" })
+} else {
+  return null
+}
 }
 
 toggleFlip2() {
@@ -69,11 +85,19 @@ toggleFlip2() {
 }
 
 flip3() {
+  if (window.innerWidth > 720) {
   this.setState({ className3 : "flipCard is-flipped", fadeThreeA : "fade", fadeThreeB : "unFade" })
+  } else {
+    return null
+  }
 }
 
 unflip3() {
+  if (window.innerWidth > 720) {
   this.setState({ className3 : "flipCard", fadeThreeA : "unFade", fadeThreeB : "fade" })
+} else {
+  return null
+}
 }
 
 toggleFlip3() {
