@@ -379,7 +379,7 @@ class App extends React.Component {
             width: 100%;
             font-size: 1.5em;
             position: relative;
-            margin-top: 80px;
+            margin-top: calc(80px + 1vh);
           }
 
           #clickAway {

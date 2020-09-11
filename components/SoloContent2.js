@@ -311,9 +311,11 @@ render() {
                     height: 100%;
                     padding: 0;
                     display: inline-block;
-                    -webkit-transition: transform 0.5s;
+                    -webkit-transition: -webkit-transform 0.5s;
+                    -moz-transition: -moz-transform 0.5s;
                     transition: transform 0.5s;
                     -webkit-transform-style: preserve-3d;
+                    -moz-transform-style: preserve-3d;
                     transform-style: preserve-3d;
                     position: relative;
                     cursor: pointer;
@@ -331,17 +333,21 @@ render() {
                   .card__face--front {
                     background: white;
                     overflow: hidden;
+                    -webkit-backface-visibility: hidden;
                   }
 
                   .card__face--back {
                     background: black;
                     -webkit-transform: rotateY( 180deg );
+                    -moz-transform: rotateY( 180deg );
                     transform: rotateY( 180deg );
                     overflow: hidden;
+                    -webkit-backface-visibility: hidden;
                   }
 
                   .flipCard.is-flipped {
                     -webkit-transform: rotateY( 180deg );
+                    -moz-transform: rotateY( 180deg );
                     transform: rotateY( 180deg );
                   }
 
@@ -373,11 +379,13 @@ render() {
                     .card__face--back {
                       background: black;
                       -webkit-transform: rotateX( 180deg );
+                      -moz-transform: rotateX( 180deg );
                       transform: rotateX( 180deg );
                     }
 
                     .flipCard.is-flipped {
                       -webkit-transform: rotateX( 180deg );
+                      -moz-transform: rotateX( 180deg );
                       transform: rotateX( 180deg );
                     }
 
