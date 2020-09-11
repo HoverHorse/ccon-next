@@ -98,7 +98,7 @@ class Who extends React.Component {
                                 width: 90%;
                                 margin: auto;
                                 color: black;
-                                font-size: 18px;
+                                font-size: 16px;
                                 text-shadow: 2px 2px 1px white;
                             }
 
