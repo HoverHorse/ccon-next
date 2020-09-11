@@ -5,7 +5,7 @@ class Who extends React.Component {
         super(props);
 
         this.state = {
-            imgURL: './assets/who-we-are.jpg'
+            imgURL: './assets/who-we-are-2.jpg'
         }
 
         };
@@ -17,7 +17,7 @@ class Who extends React.Component {
                     <img id="whoImg" src={this.state.imgURL} style={{}}></img>
                     <div id="whoContent">
                         <strong><u id="whoTitle">Who we are:</u></strong><br />
-                        Since 2005 Ccon Metals has served the precious metal recycling industry with our fully equipped processing facility in Abbotsford B.C.
+                        Since 2005, Ccon Metals has served the North American precious metal recycling industry with our fully equipped processing facility in Abbotsford B.C.
                     </div>
                     </div>
 

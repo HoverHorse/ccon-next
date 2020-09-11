@@ -5,7 +5,7 @@ class Why extends React.Component {
         super(props);
 
         this.state = {
-            imgURL: './assets/why-we-do.jpg'
+            imgURL: './assets/why-we-do-2.jpg'
         }
 
         };
