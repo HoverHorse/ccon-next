@@ -16,7 +16,7 @@ class Why extends React.Component {
                     <div id="imgContainer" style={{textAlign: "center"}}>
                     <img id="whoImg" src={this.state.imgURL} style={{}}></img>
                     <div id="whoContent">
-                        <strong><u style={{textShadow: "1px 1px 1px black"}}>Why we do it:</u></strong><br />
+                        <strong><u id="whyTitle" style={{textShadow: "1px 1px 1px black"}}>Why we do it:</u></strong><br />
                         To bring clarity and integrity to an industry that is plagued with cloudiness and uncertainty.
                     </div>
                     </div>
@@ -48,9 +48,15 @@ class Why extends React.Component {
                             margin-top: 0px;
                             transform: translate(0, 0px);
                             font-size: calc(12px + 0.3vw);
+                            
                         }
 
                         @media (max-width: 720px) {
+
+                            #whyTitle {
+                                text-shadow: 2px 2px 1px black;
+                                font-size: 20px;
+                            }
 
                             #imgContainer {
                                 height: 100%;
@@ -85,7 +91,7 @@ class Why extends React.Component {
                             }
     
                             #whoContent {
-                                
+                                font-weight: bold;
                                 transform: translate(0, -400px);
                                 width: 90%;
                                 margin: auto;

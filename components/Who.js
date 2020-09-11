@@ -93,7 +93,7 @@ class Who extends React.Component {
                             }
     
                             #whoContent {
-                                
+                                font-weight: bold;
                                 transform: translate(0, -405px);
                                 width: 90%;
                                 margin: auto;
@@ -104,6 +104,8 @@ class Who extends React.Component {
 
                             #whoTitle {
                                 text-shadow: 2px 2px 1px white;
+
+                                font-size: 20px;
                             }
 
                         }

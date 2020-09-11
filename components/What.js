@@ -16,7 +16,7 @@ class What extends React.Component {
                     <div id="imgContainer" style={{textAlign: "center"}}>
                         <img id="whatImg" src={this.state.imgURL} style={{}}></img>
                     <div id="whatContent">
-                        <strong><u style={{textShadow: "1px 1px 1px black"}}>What we do:</u></strong><br />
+                        <strong><u id="whatTitle" style={{textShadow: "1px 1px 1px black"}}>What we do:</u></strong><br />
                         We are the largest volume buyer and processor of catalytic converters in western Canada.
                     </div>
                     </div>
@@ -50,9 +50,15 @@ class What extends React.Component {
                             margin-top: 0px;
                             transform: translate(0, 0px);
                             font-size: calc(12px + 0.3vw);
+                            
                         }
 
                         @media (max-width: 720px) {
+
+                            #whatTitle {
+                                text-shadow: 2px 2px 1px black;
+                                font-size: 20px;
+                            }
 
                             #imgContainer {
                                 height: 100%;
@@ -94,6 +100,7 @@ class What extends React.Component {
                                 margin: auto;
                                 font-size: 18px;
                                 text-shadow: 2px 2px 1px black;
+                                font-weight: bold;
                             }
 
                         }

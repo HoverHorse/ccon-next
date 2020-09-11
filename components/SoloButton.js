@@ -31,8 +31,8 @@ class SoloButton extends React.Component {
                                 inset hsla(0,0%,0%, .25) 0 -1px 0px 7px, /* bottom SD */
                                 inset hsla(0,0%,100%,.7) 0  2px 1px 7px, /* top HL */
                                 
-                                hsla(0,0%, 0%,.15) 0 -5px 6px 4px, /* outer SD */
-                                hsla(0,0%,100%,.5) 0  5px 6px 4px; /* outer HL */ 
+                                hsla(0,0%, 0%,.2) 0 -2px 2px 2px, /* outer SD */
+                                hsla(0,0%,100%,.3) 0  2px 2px 2px; /* outer HL */ 
                               
                                 transition: color .2s;
                             
@@ -54,6 +54,10 @@ class SoloButton extends React.Component {
                                 
                                 -webkit-radial-gradient( 50% 50%, 200% 50%, hsla(0,0%,90%,1) 5%, hsla(0,0%,85%,1) 30%, hsla(0,0%,60%,1) 100%);
                             
+                              }
+
+                              #buttons:hover {
+                                filter: drop-shadow(0px 0px 1px #ff002b);
                               }
                               
                               #circle:before, #circle:after {

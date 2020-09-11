@@ -23,6 +23,9 @@ class SmallContent1 extends React.Component {
     this.unflip2 = this.unflip2.bind(this);
     this.flip3 = this.flip3.bind(this);
     this.unflip3 = this.unflip3.bind(this);
+    this.toggleFlip1 = this.toggleFlip1.bind(this);
+    this.toggleFlip2 = this.toggleFlip2.bind(this);
+    this.toggleFlip3 = this.toggleFlip3.bind(this);
 }
 
 flip1() {
@@ -33,12 +36,36 @@ unflip1() {
   this.setState({ className1 : "flipCard", fadeOneA : "unFade", fadeOneB : "fade" })
 }
 
+toggleFlip1() {
+  if (window.innerWidth < 721) {
+    if (this.state.fadeOneA === "unFade" && this.state.fadeOneB === "fade") {
+      this.setState({ className1 : "flipCard is-flipped", fadeOneA : "fade", fadeOneB : "unFade" })
+    } else if (this.state.fadeOneA === "fade" && this.state.fadeOneB === "unFade") {
+      this.setState({ className1 : "flipCard", fadeOneA : "unFade", fadeOneB : "fade" })
+    }
+  } else {
+    return null
+  }
+}
+
 flip2() {
   this.setState({ className2 : "flipCard is-flipped", fadeTwoA : "fade", fadeTwoB : "unFade" })
 }
 
 unflip2() {
   this.setState({ className2 : "flipCard", fadeTwoA : "unFade", fadeTwoB : "fade" })
+}
+
+toggleFlip2() {
+  if (window.innerWidth < 721) {
+    if (this.state.fadeTwoA === "unFade" && this.state.fadeTwoB === "fade") {
+      this.setState({ className2 : "flipCard is-flipped", fadeTwoA : "fade", fadeTwoB : "unFade" })
+    } else if (this.state.fadeTwoA === "fade" && this.state.fadeTwoB === "unFade") {
+      this.setState({ className2 : "flipCard", fadeTwoA : "unFade", fadeTwoB : "fade" })
+    }
+  } else {
+    return null
+  }
 }
 
 flip3() {
@@ -49,13 +76,25 @@ unflip3() {
   this.setState({ className3 : "flipCard", fadeThreeA : "unFade", fadeThreeB : "fade" })
 }
 
+toggleFlip3() {
+  if (window.innerWidth < 721) {
+    if (this.state.fadeThreeA === "unFade" && this.state.fadeThreeB === "fade") {
+      this.setState({ className3 : "flipCard is-flipped", fadeThreeA : "fade", fadeThreeB : "unFade" })
+    } else if (this.state.fadeThreeA === "fade" && this.state.fadeThreeB === "unFade") {
+      this.setState({ className3 : "flipCard", fadeThreeA : "unFade", fadeThreeB : "fade" })
+    }
+  } else {
+    return null
+  }
+}
+
 
 render() {
 
   return (
         <div id="contentContainer">
               <div className="contentCanvas contentCanvas--card">
-                  <div className="flipCardContainer" id="flipContainer1" onMouseEnter={this.flip1} onMouseLeave={this.unflip1}>
+                  <div className="flipCardContainer" id="flipContainer1" onMouseEnter={this.flip1} onClick={this.toggleFlip1} onMouseLeave={this.unflip1}>
                     <div className={this.state.className1}  id="card1">
                         <div className="card__face card__face--front" id={this.state.fadeOneA} 
                         style={{
@@ -83,7 +122,7 @@ render() {
                         </div>
                       </div>
                     </div>
-                  <div className="flipCardContainer" id="flipContainer2" onMouseEnter={this.flip2} onMouseLeave={this.unflip2}>
+                  <div className="flipCardContainer" id="flipContainer2" onMouseEnter={this.flip2} onClick={this.toggleFlip2} onMouseLeave={this.unflip2}>
                   <div className={this.state.className2}  id="card2">
                         <div className="card__face card__face--front" id={this.state.fadeTwoA} 
                         style={{
@@ -111,7 +150,7 @@ render() {
                         </div>
                       </div>
                     </div>
-                  <div className="flipCardContainer" id="flipContainer3" onMouseEnter={this.flip3} onMouseLeave={this.unflip3}>
+                  <div className="flipCardContainer" id="flipContainer3" onMouseEnter={this.flip3} onClick={this.toggleFlip3} onMouseLeave={this.unflip3}>
                   <div className={this.state.className3}  id="card3">
                         <div className="card__face card__face--front" id={this.state.fadeThreeA} 
                         style={{

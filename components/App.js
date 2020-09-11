@@ -231,6 +231,7 @@ class App extends React.Component {
             margin-left: 5vw;
             overflow-y: auto;
             overflow-x: hidden;
+            z-Index: 20;
           }
 
           .fadeIn {
@@ -370,6 +371,8 @@ class App extends React.Component {
             margin-right: 0vw;
             min-width: 200px;
           }
+
+          
 
           #clickMe {
             height: 50px;
@@ -547,6 +550,7 @@ class App extends React.Component {
               width: 90%;
               height: 33%;
               margin: auto;
+              margin-top: 3vh;
               transform: translate(-50%, 160px);
             }
   
@@ -555,6 +559,7 @@ class App extends React.Component {
               width: 90%;
               height: 33%;
               margin: auto;
+              margin-top: 1.5vh;
               transform: translate(-50%, 80px);
             }
      
