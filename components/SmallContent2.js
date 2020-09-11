@@ -309,7 +309,9 @@ render() {
                     height: 100%;
                     padding: 0;
                     display: inline-block;
+                    -webkit-transition: transform 0.5s;
                     transition: transform 0.5s;
+                    -webkit-transform-style: preserve-3d;
                     transform-style: preserve-3d;
                     position: relative;
                     cursor: pointer;
@@ -331,11 +333,13 @@ render() {
 
                   .card__face--back {
                     background: black;
+                    -webkit-transform: rotateY( 180deg );
                     transform: rotateY( 180deg );
                     overflow: hidden;
                   }
 
                   .flipCard.is-flipped {
+                    -webkit-transform: rotateY( 180deg );
                     transform: rotateY( 180deg );
                   }
 
@@ -368,10 +372,12 @@ render() {
 
                     .card__face--back {
                       background: black;
+                      -webkit-transform: rotateX( 180deg );
                       transform: rotateX( 180deg );
                     }
 
                     .flipCard.is-flipped {
+                      -webkit-transform: rotateX( 180deg );
                       transform: rotateX( 180deg );
                     }
 
