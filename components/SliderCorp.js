@@ -119,7 +119,7 @@ export default class Slider extends React.Component {
                         }
                         .ChevronLeft::after {
                             top:-10px; 
-                            border-top-color:#fff; 
+                            border-top-color: silver; 
                         }
 
                         .ChevronRight::before,
@@ -136,7 +136,7 @@ export default class Slider extends React.Component {
                         }
                         .ChevronRight::after {
                             top:-10px;
-                            border-top-color:#fff;
+                            border-top-color: silver;
                         }
 
                         #closeLink {
@@ -150,8 +150,8 @@ export default class Slider extends React.Component {
                         }
 
                         #closeLink:hover { 
-                            color: #ff0000;
-                            filter: drop-shadow(0px 0px 2px #ff0000);
+                            color: #ff002b;
+                            filter: drop-shadow(0px 0px 2px #ff002b);
                             -moz-transition: all 0.2s ease-in;
                             -o-transition: all 0.2s ease-in;
                             -webkit-transition: all 0.2s ease-in;
@@ -181,8 +181,8 @@ export default class Slider extends React.Component {
                         }
 
                         #goLeft:hover { 
-                            color: #ffe100;
-                            filter: drop-shadow(0px 0px 10px #ffe100);
+                            color: #ff002b;
+                            filter: drop-shadow(0px 0px 10px #ff002b);
                             -moz-transition: all 0.2s ease-in;
                             -o-transition: all 0.2s ease-in;
                             -webkit-transition: all 0.2s ease-in;
@@ -196,8 +196,8 @@ export default class Slider extends React.Component {
                         }
 
                         #goRight:hover { 
-                            color: #ffe100;
-                            filter: drop-shadow(0px 0px 10px #ffe100);
+                            color: #ff002b;
+                            filter: drop-shadow(0px 0px 10px #ff002b);
                             -moz-transition: all 0.2s ease-in;
                             -o-transition: all 0.2s ease-in;
                             -webkit-transition: all 0.2s ease-in;
